@@ -1,0 +1,5 @@
+# Ignore Unity auto-generated files
+Temp/
+Library/
+Logs/
+MemoryCaptures/
