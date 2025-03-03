@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 5f;
     private float jumpingPower = 7f;
     private bool isFacingRight = true;
+    private BoxCollider2D boxCollider;
+    private Animator anim;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -15,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
     void Update()
     {
@@ -22,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+            anim.SetTrigger("jump");
         }
         
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
@@ -30,6 +35,9 @@ public class PlayerMovement : MonoBehaviour
             
         }
         Flip();
+
+        anim.SetBool("walk", horizontal != 0);
+        anim.SetBool("grounded", IsGrounded());
 
     }
 
@@ -41,7 +49,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        return raycastHit.collider != null;
 
     }
         
