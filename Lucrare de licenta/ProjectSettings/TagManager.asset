@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Backround
   layers:
   - Default
   - TransparentFX
@@ -14,7 +15,7 @@ TagManager:
   - UI
   - Player
   - Ground
-  - 
+  - Lava
   - 
   - 
   - 
@@ -53,6 +54,9 @@ TagManager:
     locked: 0
   - name: Objects
     uniqueID: 1045318987
+    locked: 0
+  - name: Lava
+    uniqueID: 3968338471
     locked: 0
   - name: Ladder
     uniqueID: 169550399

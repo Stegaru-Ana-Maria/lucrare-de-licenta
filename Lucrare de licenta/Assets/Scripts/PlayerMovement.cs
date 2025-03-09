@@ -1,16 +1,21 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using System.Collections;
+using System.Collections.Generic;
+using System;
 
 
 public class PlayerMovement : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 5f;
-    private float jumpingPower = 7f;
     private bool isFacingRight = true;
+    private bool isGrounded = false;
     private BoxCollider2D boxCollider;
     private Animator anim;
 
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] float speed;
+    [SerializeField] float jumpingPower;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
@@ -23,20 +28,22 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        Flip();
+
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
             anim.SetTrigger("jump");
         }
-        
+
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-            
-        }
-        Flip();
 
-        anim.SetBool("walk", horizontal != 0);
+        }
+
+
+        anim.SetBool("run", horizontal != 0);
         anim.SetBool("grounded", IsGrounded());
 
     }
@@ -44,16 +51,23 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(horizontal * speed, rb.linearVelocity.y);
+        anim.SetFloat("xVelocity", Math.Abs(rb.linearVelocity.x));
+        anim.SetFloat("yVelocity", rb.linearVelocity.y);
     }
-    
+
 
     private bool IsGrounded()
     {
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        isGrounded = true;
+        anim.SetBool("isJumping", !isGrounded);
 
     }
-        
 
     private void Flip()
     {
