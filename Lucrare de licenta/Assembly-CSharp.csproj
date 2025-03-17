@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\PlayerAttack2.cs" />
+    <Compile Include="Assets\Scripts\Collectibles\Heart.cs" />
     <Compile Include="Assets\Scripts\Health\Healthbar.cs" />
+    <Compile Include="Assets\Scripts\Traps\Spikes.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\LadderMovement.cs" />
     <Compile Include="Assets\Scripts\Projectiles\PoisonArrow.cs" />

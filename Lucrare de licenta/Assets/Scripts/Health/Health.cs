@@ -6,11 +6,19 @@ public class Health : MonoBehaviour
     public float currentHealth { get; private set; }
     private Animator anim;
     private bool dead;
+    public GameObject gameObj;
+    public Transform respawPoint;
+    private Rigidbody2D rb;
+    public Material damagedMaterial;
+    private float hurtTimer;
+    private float damagedTime = (float)0.1;
 
     private void Awake()
     {
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        hurtTimer = damagedTime;
     }
     public void TakeDamage(float _damage)
     {
@@ -24,8 +32,12 @@ public class Health : MonoBehaviour
         {
             if (!dead)
             {
+                anim.SetTrigger("grounded");
                 anim.SetTrigger("die");
-                GetComponent<PlayerMovement>().enabled = false;
+                if (GetComponent<PlayerMovement>() != null)
+                {
+                    GetComponent<PlayerMovement>().enabled = false;
+                }
                 dead = true;
             }
         }

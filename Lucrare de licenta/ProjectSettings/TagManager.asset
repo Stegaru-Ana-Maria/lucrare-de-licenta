@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Backround
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - Player
   - Ground
   - Lava
-  - 
-  - 
+  - Trap
+  - Enemy
   - 
   - 
   - 
@@ -49,6 +50,9 @@ TagManager:
   - name: Foreground
     uniqueID: 2266267977
     locked: 0
+  - name: Player
+    uniqueID: 789409171
+    locked: 0
   - name: Ground
     uniqueID: 1971044043
     locked: 0
@@ -58,11 +62,11 @@ TagManager:
   - name: Lava
     uniqueID: 3968338471
     locked: 0
+  - name: Trap
+    uniqueID: 4136389509
+    locked: 0
   - name: Ladder
     uniqueID: 169550399
-    locked: 0
-  - name: Player
-    uniqueID: 789409171
     locked: 0
   m_RenderingLayers:
   - Default
