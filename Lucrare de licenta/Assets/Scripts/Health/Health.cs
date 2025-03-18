@@ -7,7 +7,6 @@ public class Health : MonoBehaviour
     private Animator anim;
     private bool dead;
     public GameObject gameObj;
-    public Transform respawPoint;
     private Rigidbody2D rb;
     public Material damagedMaterial;
     private float hurtTimer;
@@ -46,4 +45,20 @@ public class Health : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(currentHealth + _value, 0, startingHealth);
     }
+
+    public void RestoreHealth()
+    {
+        currentHealth = startingHealth; 
+    }
+
+    private void Die()
+    {
+        Invoke("Respawn", 1f); 
+    }
+
+    public void ResetDeathState()
+    {
+        dead = false;  
+    }
+
 }

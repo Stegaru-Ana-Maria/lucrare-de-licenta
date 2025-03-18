@@ -3,11 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|c:\\users\\stega\\onedrive\\desktop\\licenta\\lucrare de licenta\\assets\\scripts\\health\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\assets\\scripts\\player\\playerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|c:\\users\\stega\\onedrive\\desktop\\licenta\\lucrare de licenta\\assets\\scripts\\traps\\lava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\traps\\lava.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|c:\\users\\stega\\onedrive\\desktop\\licenta\\lucrare de licenta\\assets\\scripts\\checkpoint\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\checkpoint\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\assets\\scripts\\health\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|c:\\users\\stega\\onedrive\\desktop\\licenta\\lucrare de licenta\\assets\\scripts\\collectibles\\heart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\assets\\scripts\\collectibles\\heart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collectibles\\heart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -17,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\assets\\scripts\\health\\healthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health\\healthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +42,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Checkpoint.cs",
+              "DocumentMoniker": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Checkpoint\\Checkpoint.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Checkpoint\\Checkpoint.cs",
+              "ToolTip": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Checkpoint\\Checkpoint.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Checkpoint\\Checkpoint.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T19:29:19.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Lava.cs",
+              "DocumentMoniker": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Traps\\Lava.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Traps\\Lava.cs",
+              "ToolTip": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Traps\\Lava.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Traps\\Lava.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T19:17:43.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerRespawn.cs",
+              "DocumentMoniker": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Player\\PlayerRespawn.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerRespawn.cs",
+              "ToolTip": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Player\\PlayerRespawn.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerRespawn.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAgwCgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T14:11:29.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Health.cs",
+              "DocumentMoniker": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Health\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Health\\Health.cs",
+              "ToolTip": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Health\\Health.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Health\\Health.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAA7wAgAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T10:26:17.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Heart.cs",
               "DocumentMoniker": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Collectibles\\Heart.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Collectibles\\Heart.cs",
               "ToolTip": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Collectibles\\Heart.cs",
               "RelativeToolTip": "Assets\\Scripts\\Collectibles\\Heart.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T19:27:20.878Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Spikes.cs",
               "DocumentMoniker": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Traps\\Spikes.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Traps\\Spikes.cs",
@@ -65,26 +129,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
               "ToolTip": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Player\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAQwCsAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T11:37:57.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Health.cs",
-              "DocumentMoniker": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Health\\Health.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Health\\Health.cs",
-              "ToolTip": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Health\\Health.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Health\\Health.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAgwAkAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T10:26:17.724Z",
+              "WhenOpened": "2025-03-17T11:37:57.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Healthbar.cs",
               "DocumentMoniker": "C:\\Users\\stega\\OneDrive\\Desktop\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Health\\Healthbar.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Health\\Healthbar.cs",
