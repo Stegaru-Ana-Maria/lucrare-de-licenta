@@ -3,6 +3,7 @@ using UnityEngine;
 public class AttackState : EnemyState
 {
     private float cooldownTimer = 0;
+    private bool canDealDamage;
 
     public AttackState(EnemyFSM enemy) : base(enemy) { }
 
@@ -26,7 +27,6 @@ public class AttackState : EnemyState
         if (cooldownTimer <= 0)
         {
             enemy.anim.SetTrigger("attack");
-            DamagePlayer();
             cooldownTimer = enemy.attackCooldown;
         }
     }
@@ -41,7 +41,7 @@ public class AttackState : EnemyState
         return Vector2.Distance(enemy.enemy.position, enemy.player.position) <= enemy.attackRange;
     }
 
-    private void DamagePlayer()
+    public void DamagePlayer()
     {
         Collider2D hit = Physics2D.OverlapCircle(enemy.enemy.position, enemy.attackRange, enemy.playerLayer);
 
@@ -61,5 +61,6 @@ public class AttackState : EnemyState
         {
             Debug.Log("Attack missed. No player in range.");
         }
+ 
     }
 }

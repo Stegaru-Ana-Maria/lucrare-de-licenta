@@ -65,7 +65,7 @@ public class Health : MonoBehaviour
     {
         if (rb != null)
         {
-            rb.linearVelocity = Vector2.zero; // Reseteaz? viteza �nainte de knockback
+            rb.linearVelocity = Vector2.zero; 
             rb.AddForce(force, ForceMode2D.Impulse);
         }
     }

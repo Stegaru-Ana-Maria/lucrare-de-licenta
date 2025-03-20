@@ -51,4 +51,26 @@ public class EnemyFSM : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
+
+    public void DamagePlayer()
+    {
+        Collider2D hit = Physics2D.OverlapCircle(enemy.position, attackRange, playerLayer);
+
+        if (hit != null)
+        {
+            Health playerHealth = hit.GetComponent<Health>();
+            if (playerHealth != null)
+            {
+                Debug.Log("Enemy hit the player!");
+                playerHealth.TakeDamage(damage);
+
+                Vector2 knockbackDirection = (hit.transform.position - enemy.position).normalized;
+                playerHealth.ApplyKnockback(knockbackDirection * knockbackForce);
+            }
+        }
+        else
+        {
+            Debug.Log("Attack missed. No player in range.");
+        }
+    }
 }
