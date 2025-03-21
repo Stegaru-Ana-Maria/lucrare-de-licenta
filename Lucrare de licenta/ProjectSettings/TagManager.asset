@@ -10,6 +10,7 @@ TagManager:
   - Checkpoint
   - Lava
   - Enemy
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Lava
   - Trap
   - Enemy
-  - 
+  - Door
   - 
   - 
   - 
@@ -52,6 +53,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2266267977
+    locked: 0
+  - name: Door
+    uniqueID: 1526625335
     locked: 0
   - name: Player
     uniqueID: 789409171
