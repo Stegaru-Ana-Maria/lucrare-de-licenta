@@ -11,6 +11,9 @@ TagManager:
   - Lava
   - Enemy
   - Door
+  - Ladder
+  - Key
+  - Object
   layers:
   - Default
   - TransparentFX
@@ -24,10 +27,10 @@ TagManager:
   - Trap
   - Enemy
   - Door
-  - 
-  - 
-  - 
-  - 
+  - Ladder
+  - Backround
+  - Key
+  - Object
   - 
   - 
   - 
@@ -60,20 +63,26 @@ TagManager:
   - name: Player
     uniqueID: 789409171
     locked: 0
-  - name: Ground
-    uniqueID: 1971044043
-    locked: 0
-  - name: Objects
-    uniqueID: 1045318987
-    locked: 0
-  - name: Lava
-    uniqueID: 3968338471
+  - name: Enemy
+    uniqueID: 2292781627
     locked: 0
   - name: Trap
     uniqueID: 4136389509
     locked: 0
+  - name: Ground
+    uniqueID: 1971044043
+    locked: 0
+  - name: Lava
+    uniqueID: 3968338471
+    locked: 0
+  - name: Object
+    uniqueID: 1045318987
+    locked: 0
   - name: Ladder
     uniqueID: 169550399
+    locked: 0
+  - name: Key
+    uniqueID: 2875387849
     locked: 0
   m_RenderingLayers:
   - Default
