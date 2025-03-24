@@ -26,6 +26,7 @@ public class PoisonArrow : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Arrow hit: " + collision.name);
         hit = true;
         boxCollider.enabled = false;
         anim.SetTrigger("impact");

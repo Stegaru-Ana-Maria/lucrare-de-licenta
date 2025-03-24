@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 838185990765890524}
   - component: {fileID: 1428331383521553643}
   - component: {fileID: 7336716985931261943}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: PoisonArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.39, y: -1.83, z: 0}
-  m_LocalScale: {x: 1.5, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,8 +77,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2028699319
-  m_SortingLayer: 2
+  m_SortingLayerID: 1045318987
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -120133462129419705, guid: 98e143377935d2c4ab141d946db98d68, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
