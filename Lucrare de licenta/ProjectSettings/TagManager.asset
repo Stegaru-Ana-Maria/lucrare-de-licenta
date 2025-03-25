@@ -14,6 +14,8 @@ TagManager:
   - Ladder
   - Key
   - Object
+  - PowerUp
+  - Arrow
   layers:
   - Default
   - TransparentFX
