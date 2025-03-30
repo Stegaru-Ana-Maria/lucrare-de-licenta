@@ -12,9 +12,7 @@ public class FlyingEnemyFSM : MonoBehaviour
     public LayerMask playerLayer;
     private float lastAttackTime = 5f;
     [SerializeField] public float detectionRange = 10f;
-    [SerializeField] public int damage = 1;
     [SerializeField] public float attackCooldown = 2f;
-    [SerializeField] public float knockbackForce = 7f;
 
     [Header("Patrolling")]
     public Transform patrolPointA;
@@ -45,32 +43,10 @@ public class FlyingEnemyFSM : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && Time.time >= lastAttackTime + attackCooldown)
+        if (collision.CompareTag("Player") && !(currentState is FlyingAttackState))
         {
-            Health playerHealth = collision.GetComponent<Health>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damage);
-                ApplyKnockback(collision.transform);
-                lastAttackTime = Time.time;
-            }
-        }
-    }
-
-    private void ApplyKnockback(Transform playerTransform)
-    {
-        Rigidbody2D playerRb = playerTransform.GetComponent<Rigidbody2D>();
-        if (playerRb != null)
-        {
-            Vector2 knockbackDirection = (playerTransform.position - transform.position).normalized;
-
-            float horizontalForce = knockbackForce * Mathf.Sign(knockbackDirection.x);
-            float verticalForce = knockbackForce * 0.5f;
-
-            Vector2 knockbackVector = new Vector2(horizontalForce, verticalForce);
-
-            playerRb.linearVelocity = Vector2.zero;
-            playerRb.AddForce(knockbackVector, ForceMode2D.Impulse);
+            Debug.Log("Player detectat - Trecerea in starea de atac");
+            ChangeState(new FlyingAttackState(this));
         }
     }
 

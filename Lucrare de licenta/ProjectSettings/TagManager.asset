@@ -16,6 +16,7 @@ TagManager:
   - Object
   - PowerUp
   - Arrow
+  - FlyingEnemy
   layers:
   - Default
   - TransparentFX

@@ -33,6 +33,7 @@ public class FlyingEnemyHealth : MonoBehaviour
 
         if (spriteRenderer != null)
         {
+            anim.SetTrigger("hurt");
             StartCoroutine(FlashRed());
         }
 
@@ -54,8 +55,7 @@ public class FlyingEnemyHealth : MonoBehaviour
         if (!isDead)
         {
             isDead = true;
-            anim.SetTrigger("die");
-            Destroy(gameObject, 1.5f);
+            Destroy(gameObject, 1f);
         }
     }
 }

@@ -3,8 +3,10 @@ using UnityEngine;
 public class FlyingChaseState : FlyingEnemyState
 {
     private Unit pathFollower;
-    private float updatePathTimer = 0f;
-    private float updatePathCooldown = 0.5f;
+    private float pathUpdateTimer = 0f;
+    private const float pathUpdateCooldown = 0.5f;
+    private Vector2 lastPlayerPosition;
+
     public FlyingChaseState(FlyingEnemyFSM enemy) : base(enemy)
     {
         pathFollower = enemy.GetComponent<Unit>();
@@ -13,13 +15,13 @@ public class FlyingChaseState : FlyingEnemyState
     public override void EnterState()
     {
         Debug.Log("Intrat în starea de urmarire");
-        enemy.anim.SetBool("moving", true);
+        lastPlayerPosition = enemy.player.position;
         RequestPathToPlayer();
     }
 
     public override void UpdateState()
     {
-        updatePathTimer += Time.deltaTime;
+        pathUpdateTimer += Time.deltaTime;
 
         if (Vector2.Distance(enemy.enemy.position, enemy.player.position) > enemy.stopChaseDistance)
         {
@@ -29,11 +31,17 @@ public class FlyingChaseState : FlyingEnemyState
 
         FlipTowardsPlayer();
 
-        if (updatePathTimer >= updatePathCooldown)
+        if (pathUpdateTimer >= pathUpdateCooldown && HasPlayerMovedSignificantly())
         {
             RequestPathToPlayer();
-            updatePathTimer = 0f;
+            pathUpdateTimer = 0f;
+            lastPlayerPosition = enemy.player.position;
         }
+    }
+
+    private bool HasPlayerMovedSignificantly()
+    {
+        return Vector2.Distance(enemy.player.position, lastPlayerPosition) > 0.5f;
     }
 
     private void RequestPathToPlayer()
@@ -43,8 +51,8 @@ public class FlyingChaseState : FlyingEnemyState
 
     private void FlipTowardsPlayer()
     {
-        if ((enemy.player.position.x < enemy.enemy.position.x && enemy.enemy.localScale.x > 0) ||
-            (enemy.player.position.x > enemy.enemy.position.x && enemy.enemy.localScale.x < 0))
+        float direction = enemy.player.position.x - enemy.enemy.position.x;
+        if ((direction < 0 && enemy.enemy.localScale.x > 0) || (direction > 0 && enemy.enemy.localScale.x < 0))
         {
             enemy.enemy.localScale = new Vector3(-enemy.enemy.localScale.x, enemy.enemy.localScale.y, enemy.enemy.localScale.z);
         }
@@ -52,6 +60,6 @@ public class FlyingChaseState : FlyingEnemyState
 
     public override void ExitState()
     {
-        enemy.anim.SetBool("moving", false);
+        Debug.Log("Inamicul a iesit din starea de urmarire");
     }
 }

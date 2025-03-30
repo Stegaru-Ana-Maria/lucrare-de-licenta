@@ -87,6 +87,8 @@
     <Compile Include="Assets\Scripts\LevelMenu.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bee\FlyingEnemyState.cs" />
     <Compile Include="Assets\Scripts\BreakableBox.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Bee\FlyingEnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Bee\FlyingAttackState.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Node.cs" />
     <Compile Include="Assets\Scripts\Enemies\AttackState.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Key.cs" />

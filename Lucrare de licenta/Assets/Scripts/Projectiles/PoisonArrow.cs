@@ -31,12 +31,18 @@ public class PoisonArrow : MonoBehaviour
         boxCollider.enabled = false;
         anim.SetTrigger("impact");
 
+        if (collision.tag == "FlyingEnemy")
+        {
+            collision.GetComponent<FlyingEnemyHealth>().TakeDamage(1);
+            Debug.Log("Arrow hit the enemy!");
+        }
+
         if (collision.tag == "Enemy")
         {
             collision.GetComponent<EnemyHealth>().TakeDamage(1);
             Debug.Log("Arrow hit the enemy!");
         }
-            
+
         if (collision.CompareTag("Ground"))
         {
             hit = true;
