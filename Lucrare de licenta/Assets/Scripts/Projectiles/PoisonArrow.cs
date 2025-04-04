@@ -49,6 +49,12 @@ public class PoisonArrow : MonoBehaviour
             boxCollider.enabled = false;
             anim.SetTrigger("impact");
         }
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            collision.gameObject.GetComponent<BossHealth>().TakeDamage(3f);
+            Debug.Log("Arrow hit the boss!");
+        }
+
     }
     public void SetDirection(float _direction)
     {

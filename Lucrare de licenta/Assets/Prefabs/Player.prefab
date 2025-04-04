@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e33273d63c82f084f8746b3b4332c37b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 3
+  startingHealth: 5
   gameObj: {fileID: 3040055056721246239}
   damagedMaterial: {fileID: 0}
 --- !u!95 &1190247102561375529

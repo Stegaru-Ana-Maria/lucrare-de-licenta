@@ -62,12 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Pathfinding\Pathfinding.cs" />
+    <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\ChaseNode.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack2.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Heart.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyFloat.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyDoor.cs" />
     <Compile Include="Assets\Scripts\Collectibles\UI_KeyHolder.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Grid.cs" />
+    <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\NormalCombatNode.cs" />
     <Compile Include="Assets\Scripts\Health\Healthbar.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BTNode.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyHealth.cs" />
@@ -77,8 +79,11 @@
     <Compile Include="Assets\Scripts\Behavior Trees\Repeater.cs" />
     <Compile Include="Assets\Scripts\Traps\Spikes.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\ParallelNode.cs" />
+    <Compile Include="Assets\Scripts\Bosses\Boss2\BossHealth.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\Inverter.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\ActionNode.cs" />
+    <Compile Include="Assets\Scripts\Bosses\Boss2\BossRoomTrigger.cs" />
+    <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\Attack1Node.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\CooldownNode.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\PathRequestManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
@@ -87,6 +92,7 @@
     <Compile Include="Assets\Scripts\Enemies\EnemyState.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bee\FlyingPatrolState.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyHolder.cs" />
+    <Compile Include="Assets\Scripts\Bosses\Boss2\Boss2AI.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bee\FlyingEnemyFSM.cs" />
     <Compile Include="Assets\Scripts\Projectiles\PoisonArrow.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
@@ -108,6 +114,7 @@
     <Compile Include="Assets\Scripts\Pathfinding\Unit.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\Sequence.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Heap.cs" />
+    <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\BossHealthNode.cs" />
     <Compile Include="Assets\Scripts\Checkpoint\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
   </ItemGroup>
