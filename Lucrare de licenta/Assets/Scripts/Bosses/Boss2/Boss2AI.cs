@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
+//using UnityEditor.Experimental.GraphView;
 
 public class Boss2AI : MonoBehaviour
 {
@@ -10,8 +12,8 @@ public class Boss2AI : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
 
     [Header("Ranges")]
-    [SerializeField] private float attack1Range = 3f;
-    [SerializeField] private float attack2Range = 2.5f;
+    [SerializeField] private float attack1Range = 3.5f;
+    [SerializeField] private float attack2Range = 3f;
     [SerializeField] private float specialAttackRange = 10f;
 
     [Header("Cooldowns")]
@@ -21,9 +23,13 @@ public class Boss2AI : MonoBehaviour
 
     [Header("Dependencies")]
     [SerializeField] private LayerMask obstacleMask;
-    [SerializeField] private GameObject attack1Hitbox;
+    [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float attack1Duration = 0.5f;
+    [SerializeField] private float attack2Duration = 1.6f;
 
+    [Header("Special Attack - Crystal")]
+    [SerializeField] private GameObject crystalPrefab;
+    [SerializeField] private Transform crystalSpawnPoint;
 
     private BTNode root;
     private Transform player;
@@ -32,7 +38,8 @@ public class Boss2AI : MonoBehaviour
     private Rigidbody2D rb;
 
     private bool playerInRoom = false;
-    private bool isBerserk = false;
+    public bool isPerformingSpecialAttack = false;
+
 
     void Start()
     {
@@ -47,7 +54,7 @@ public class Boss2AI : MonoBehaviour
         var isPlayerInRoom = new ConditionNode(() => playerInRoom);
         var isPlayerInAttack1Range = new ConditionNode(() => Vector2.Distance(transform.position, player.position) < attack1Range);
         var isPlayerInAttack2Range = new ConditionNode(() => Vector2.Distance(transform.position, player.position) < attack2Range);
-        var isPlayerInLaserRange = new ConditionNode(() => Vector2.Distance(transform.position, player.position) < specialAttackRange);
+        var isPlayerInSpecialAttackRange = new ConditionNode(() => Vector2.Distance(transform.position, player.position) < specialAttackRange);
         var isTooFarForAttack = new ConditionNode(() => Vector2.Distance(transform.position, player.position) > attack1Range);
 
         var isLowHP = new ConditionNode(() => bossHP < maxHP * 0.3f);
@@ -55,26 +62,39 @@ public class Boss2AI : MonoBehaviour
         #endregion
 
         #region Actions
-        var attack1 = new Attack1Node(transform, player, animator, attackCooldownTime, attack1Duration, 1f, 8f, LayerMask.GetMask("Player"), attack1Range);
+        var attack1 = new MeleeAttackNode(
+            transform, player, animator,
+            "attack1",
+            cooldown: 2f,
+            attackDuration: attack1Duration,
+            damage: 1f,
+            knockbackForce: 5f,
+            playerLayer: playerLayer,
+            attackRange: attack1Range
+        );
 
+        var attack2 = new MeleeAttackNode(
+            transform, player, animator,
+            "attack2",
+            cooldown: 3f,
+            attackDuration: attack2Duration,
+            damage: 1.5f,
+            knockbackForce: 7f,
+            playerLayer: playerLayer,
+            attackRange: attack2Range,
+            damageFrameRatio: 3f / 7f
+        );
 
-        var attack2 = new ActionNode(() =>
-        {
-            animator.SetTrigger("Attack2");
-            Debug.Log("Boss foloseste Attack2");
-            return NodeState.SUCCESS;
-        });
-
-        var specialAttack = new ActionNode(() =>
-        {
-            animator.SetTrigger("Laser");
-            Debug.Log("Boss lanseaza atacul special (Laser)");
-            return NodeState.SUCCESS;
-        });
+        var specialAttack = new SpecialCrystalAttackNode(
+            transform, player, animator, crystalPrefab, crystalSpawnPoint,
+            cooldown: 8f,
+            attackDuration: 2.0f,
+            playerLayer: LayerMask.GetMask("Player")
+        );
 
         var heal = new ActionNode(() =>
         {
-            Debug.Log("Boss se vindeca!");
+            Debug.Log("Boss-ul se vindeca!");
             bossHP += maxHP * 0.2f;
             bossHP = Mathf.Min(bossHP, maxHP);
             return NodeState.SUCCESS;
@@ -90,9 +110,9 @@ public class Boss2AI : MonoBehaviour
         #endregion
 
         #region Cooldowns
-        var laserCooldown = new CooldownNode(specialAttack, attackCooldownTime);
+        var crystalCooldown = new CooldownNode(specialAttack, attackCooldownTime);
         var healCooldownNode = new CooldownNode(heal, healCooldown);
-        var berserkLaser = new CooldownNode(specialAttack, berserkCooldownTime);
+        var berserkCrystal = new CooldownNode(specialAttack, berserkCooldownTime);
         var berserkAttack1 = new CooldownNode(attack1, berserkCooldownTime);
         var berserkAttack2 = new CooldownNode(attack2, berserkCooldownTime);
         #endregion
@@ -104,7 +124,7 @@ public class Boss2AI : MonoBehaviour
         {
             new Sequence(new List<BTNode> { isPlayerInAttack1Range, berserkAttack1 }),
             new Sequence(new List<BTNode> { isPlayerInAttack2Range, berserkAttack2 }),
-            new Sequence(new List<BTNode> { isPlayerInLaserRange, berserkLaser })
+            new Sequence(new List<BTNode> { isPlayerInSpecialAttackRange, berserkCrystal })
         });
 
         var berserkTree = new Sequence(new List<BTNode>
@@ -117,22 +137,9 @@ public class Boss2AI : MonoBehaviour
         var defensiveTree = new Sequence(new List<BTNode>
         {
             isLowHP,
-            isPlayerInLaserRange,
-            laserCooldown,
+            isPlayerInSpecialAttackRange,
+            crystalCooldown,
             healCooldownNode
-        });
-
-        // --- Normal Combat ---
-        var meleeAttackSequence = new Sequence(new List<BTNode>
-        {
-            isPlayerInAttack1Range,
-            attack1
-        });
-
-        var chaseIfTooFar = new Sequence(new List<BTNode>
-        {
-            isTooFarForAttack,
-            chase
         });
 
         var combatTree = new Sequence(new List<BTNode>
@@ -140,9 +147,10 @@ public class Boss2AI : MonoBehaviour
             isPlayerInRoom,
             new Selector(new List<BTNode>
             {
-                meleeAttackSequence,
-                new Sequence(new List<BTNode> { isPlayerInLaserRange, laserCooldown }),
-                chaseIfTooFar
+               // new Sequence(new List<BTNode> { isPlayerInAttack1Range, attack1 }),
+               // new Sequence(new List<BTNode> { isPlayerInAttack2Range, attack2 }),
+                new Sequence(new List<BTNode> { isPlayerInSpecialAttackRange, crystalCooldown }),
+                new Sequence(new List<BTNode> { isTooFarForAttack, chase })
             })
         });
 
@@ -177,6 +185,28 @@ public class Boss2AI : MonoBehaviour
     {
         bossHP -= damage;
         Debug.Log($"Boss HP: {bossHP}/{maxHP}");
+    }
+
+    private IEnumerator HandleCrystalAttack()
+    {
+        // 1. Instantiere cristal
+        GameObject crystal = Instantiate(crystalPrefab, crystalSpawnPoint.position, Quaternion.identity);
+
+        // 2. Asteapta pana la frame-ul 12 (~0.13s pe frame * 4 frame-uri = 0.5s)
+        yield return new WaitForSeconds(0.5f); // ajusteaza in functie de framerate-ul animatiei bossului
+
+        // 3. Activeaza animatia de "disappear"
+        Animator crystalAnim = crystal.GetComponent<Animator>();
+        if (crystalAnim != null)
+        {
+            crystalAnim.SetTrigger("disappear");
+        }
+
+        // 4. Asteapta durata animatiei de disparitie (ex: 0.5s)
+        yield return new WaitForSeconds(0.5f);
+
+        // 5. Distruge cristalul
+        Destroy(crystal);
     }
 
     private void OnDrawGizmosSelected()

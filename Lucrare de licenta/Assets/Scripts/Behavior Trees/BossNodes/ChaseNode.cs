@@ -38,6 +38,12 @@ public class ChaseNode : BTNode
             return NodeState.SUCCESS;
         }
 
+        if (bossTransform.GetComponent<Boss2AI>().isPerformingSpecialAttack)
+        {
+            animator.SetBool("isRunning", false);
+            return NodeState.FAILURE;
+        }
+
         animator.SetBool("isRunning", true);
         FlipTowardsPlayer();
 

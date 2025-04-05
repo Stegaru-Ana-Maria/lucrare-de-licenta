@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Pathfinding\Pathfinding.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\ChaseNode.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack2.cs" />
+    <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\SpecialCrystalAttackNode.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Heart.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyFloat.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyDoor.cs" />
@@ -81,9 +82,9 @@
     <Compile Include="Assets\Scripts\Behavior Trees\ParallelNode.cs" />
     <Compile Include="Assets\Scripts\Bosses\Boss2\BossHealth.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\Inverter.cs" />
+    <Compile Include="Assets\Scripts\Bosses\Boss2\CrystalHitbox.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\ActionNode.cs" />
     <Compile Include="Assets\Scripts\Bosses\Boss2\BossRoomTrigger.cs" />
-    <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\Attack1Node.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\CooldownNode.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\PathRequestManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Assets\Scripts\Projectiles\PoisonArrow.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyFSM.cs" />
+    <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\MeleeAttackNode.cs" />
     <Compile Include="Assets\Scripts\LevelMenu.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bee\FlyingEnemyState.cs" />
     <Compile Include="Assets\Scripts\BreakableBox.cs" />

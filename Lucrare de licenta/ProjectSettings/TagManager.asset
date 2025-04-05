@@ -18,7 +18,6 @@ TagManager:
   - Arrow
   - FlyingEnemy
   - Boss
-  - obstacleMask
   layers:
   - Default
   - TransparentFX
@@ -39,7 +38,7 @@ TagManager:
   - MapBound
   - Arrow
   - Boss
-  - obstacleMask
+  - 
   - 
   - 
   - 
