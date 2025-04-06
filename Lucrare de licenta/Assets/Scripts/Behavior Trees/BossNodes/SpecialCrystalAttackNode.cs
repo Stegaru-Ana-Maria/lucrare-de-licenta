@@ -13,9 +13,10 @@ public class SpecialCrystalAttackNode : BTNode
     private float attackDuration;
     private LayerMask playerLayer;
     private float lastAttackTime;
+    private float specialAttackRange;
     private Boss2AI bossAI;
 
-    public SpecialCrystalAttackNode(Transform boss, Transform player, Animator animator, GameObject crystalPrefab, Transform crystalSpawnPoint, float cooldown, float attackDuration, LayerMask playerLayer)
+    public SpecialCrystalAttackNode(Transform boss, Transform player, Animator animator, GameObject crystalPrefab, Transform crystalSpawnPoint, float cooldown, float attackDuration, float specialAttackRange, LayerMask playerLayer)
     {
         this.boss = boss;
         this.player = player;
@@ -24,6 +25,7 @@ public class SpecialCrystalAttackNode : BTNode
         this.crystalSpawnPoint = crystalSpawnPoint;
         this.cooldown = cooldown;
         this.attackDuration = attackDuration;
+        this.specialAttackRange = specialAttackRange;
         this.playerLayer = playerLayer;
         bossAI = boss.GetComponent<Boss2AI>();
     }
@@ -31,6 +33,10 @@ public class SpecialCrystalAttackNode : BTNode
     public override NodeState Evaluate()
     {
         if (Time.time - lastAttackTime < cooldown)
+            return NodeState.FAILURE;
+
+        float distanceToPlayer = Vector2.Distance(boss.position, player.position);
+        if (distanceToPlayer > specialAttackRange)
             return NodeState.FAILURE;
 
         animator.SetBool("isRunning", false);
@@ -43,39 +49,7 @@ public class SpecialCrystalAttackNode : BTNode
         }
 
         return NodeState.SUCCESS;
-    }
-    /*
-    private IEnumerator HandleCrystalAttack()
-    {
-        boss.GetComponent<Boss2AI>().isPerformingSpecialAttack = true;
-
-        GameObject crystal = GameObject.Instantiate(crystalPrefab);
-        crystal.transform.position = crystalSpawnPoint.position;
-
-        Animator crystalAnim = crystal.GetComponent<Animator>();
-        if (crystalAnim != null)
-        {
-            crystalAnim.Play("Idle", 0); 
-            crystalAnim.ResetTrigger("disappear");
-            crystalAnim.SetTrigger("appear");
-            Debug.Log("APPEAR");
-        }
-
-        yield return new WaitForSeconds(0.5f); 
-
-        if (crystalAnim != null)
-        {
-            crystalAnim.SetTrigger("disappear");
-            Debug.Log("DISAPPEAR");
-        }
-
-        yield return new WaitForSeconds(0.5f); 
-
-        GameObject.Destroy(crystal);
-        boss.GetComponent<Boss2AI>().isPerformingSpecialAttack = false;
-    }
-    */
-    
+    }    
     private IEnumerator HandleCrystalAttack()
     {
         bossAI.isPerformingSpecialAttack = true;
@@ -88,20 +62,28 @@ public class SpecialCrystalAttackNode : BTNode
             Quaternion.identity
         );
 
-
-        crystal.SetActive(true);
-
-        yield return new WaitForSeconds(0.2f); 
+        CrystalHitbox hitbox = crystal.GetComponent<CrystalHitbox>();
+        if (hitbox != null)
+        {
+            float bossDirection = Mathf.Sign(boss.localScale.x);
+            hitbox.SetDirection(bossDirection);
+        }
 
         Animator crystalAnim = crystal.GetComponent<Animator>();
         if (crystalAnim != null)
         {
             crystalAnim.SetTrigger("appear");
-            Debug.Log("APPEAR");
         }
 
-        yield return new WaitForSeconds(0.5f); // durata animatiei de disparitie
-       // crystalAnim.SetTrigger("disappear");
+        yield return new WaitForSeconds(0.13f);
+
+        if (crystalAnim != null)
+        {
+            crystalAnim.SetTrigger("disappear");
+        }
+
+        yield return new WaitForSeconds(0.3f); 
+
         GameObject.Destroy(crystal);
         bossAI.isPerformingSpecialAttack = false;
     }

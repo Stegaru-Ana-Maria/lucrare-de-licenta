@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\ChaseNode.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack2.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\SpecialCrystalAttackNode.cs" />
+    <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\RetreatNode.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Heart.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyFloat.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyDoor.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Assets\Scripts\Enemies\Bee\FlyingEnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bee\FlyingAttackState.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Node.cs" />
+    <Compile Include="Assets\Scripts\Bosses\Boss2\BossShield.cs" />
     <Compile Include="Assets\Scripts\Enemies\AttackState.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Key.cs" />
     <Compile Include="Assets\Scripts\Enemies\ChaseState.cs" />

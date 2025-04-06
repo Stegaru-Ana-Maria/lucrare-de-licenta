@@ -6,15 +6,14 @@ using System.Collections;
 public class Boss2AI : MonoBehaviour
 {
     [Header("Stats")]
-    [SerializeField] private float maxHP = 100f;
-    [SerializeField] private float bossHP;
+    [SerializeField] private float maxHP = 10f;
     [SerializeField] private float chaseSpeed = 5f;
     [SerializeField] private float jumpForce = 10f;
 
     [Header("Ranges")]
     [SerializeField] private float attack1Range = 3.5f;
     [SerializeField] private float attack2Range = 3f;
-    [SerializeField] private float specialAttackRange = 10f;
+    [SerializeField] private float specialAttackRange = 7f;
 
     [Header("Cooldowns")]
     [SerializeField] private float attackCooldownTime = 2f;
@@ -48,8 +47,6 @@ public class Boss2AI : MonoBehaviour
         animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        bossHP = maxHP;
-
         #region Condition Nodes
         var isPlayerInRoom = new ConditionNode(() => playerInRoom);
         var isPlayerInAttack1Range = new ConditionNode(() => Vector2.Distance(transform.position, player.position) < attack1Range);
@@ -57,8 +54,8 @@ public class Boss2AI : MonoBehaviour
         var isPlayerInSpecialAttackRange = new ConditionNode(() => Vector2.Distance(transform.position, player.position) < specialAttackRange);
         var isTooFarForAttack = new ConditionNode(() => Vector2.Distance(transform.position, player.position) > attack1Range);
 
-        var isLowHP = new ConditionNode(() => bossHP < maxHP * 0.3f);
-        var isBerserk = new ConditionNode(() => bossHP < maxHP * 0.15f);
+        var isLowHP = new ConditionNode(() => bossHealth.GetHealth() < maxHP * 0.3f);
+        var isBerserk = new ConditionNode(() => bossHealth.GetHealth() < maxHP * 0.15f);
         #endregion
 
         #region Actions
@@ -89,16 +86,18 @@ public class Boss2AI : MonoBehaviour
             transform, player, animator, crystalPrefab, crystalSpawnPoint,
             cooldown: 8f,
             attackDuration: 2.0f,
+            specialAttackRange: specialAttackRange,
             playerLayer: LayerMask.GetMask("Player")
         );
 
+        var retreat = new RetreatNode(transform, player, rb, chaseSpeed * 1.2f, attack1Range + 1.5f);
+
         var heal = new ActionNode(() =>
         {
-            Debug.Log("Boss-ul se vindeca!");
-            bossHP += maxHP * 0.2f;
-            bossHP = Mathf.Min(bossHP, maxHP);
+            bossHealth.Heal(bossHealth.GetMaxHealth() * 0.2f);
             return NodeState.SUCCESS;
         });
+
 
         var chase = new ChaseNode(transform, player, chaseSpeed, animator, rb, obstacleMask);
 
@@ -137,19 +136,23 @@ public class Boss2AI : MonoBehaviour
         var defensiveTree = new Sequence(new List<BTNode>
         {
             isLowHP,
-            isPlayerInSpecialAttackRange,
-            crystalCooldown,
-            healCooldownNode
+             new Selector(new List<BTNode>
+             {
+                 // Daca e prea aproape, se retrage
+                new Sequence(new List<BTNode>{new ConditionNode(() => Vector2.Distance(transform.position, player.position) < attack1Range), retreat}),
+                // Daca e la distanta si player-ul e in range, ataca
+                new Sequence(new List<BTNode>{isPlayerInSpecialAttackRange, crystalCooldown}),healCooldownNode,idle})
         });
+
 
         var combatTree = new Sequence(new List<BTNode>
         {
             isPlayerInRoom,
             new Selector(new List<BTNode>
             {
-               // new Sequence(new List<BTNode> { isPlayerInAttack1Range, attack1 }),
-               // new Sequence(new List<BTNode> { isPlayerInAttack2Range, attack2 }),
-                new Sequence(new List<BTNode> { isPlayerInSpecialAttackRange, crystalCooldown }),
+                new Sequence(new List<BTNode> { isPlayerInAttack1Range, attack1 }),
+                new Sequence(new List<BTNode> { isPlayerInAttack2Range, attack2 }),
+                //new Sequence(new List<BTNode> { isPlayerInSpecialAttackRange, crystalCooldown }),
                 new Sequence(new List<BTNode> { isTooFarForAttack, chase })
             })
         });
@@ -179,12 +182,6 @@ public class Boss2AI : MonoBehaviour
     public void SetPlayerInRoom(bool isInRoom)
     {
         playerInRoom = isInRoom;
-    }
-
-    public void TakeDamage(float damage)
-    {
-        bossHP -= damage;
-        Debug.Log($"Boss HP: {bossHP}/{maxHP}");
     }
 
     private IEnumerator HandleCrystalAttack()
