@@ -1,16 +1,16 @@
-using UnityEngine;
-
 public class Repeater : BTNode
 {
     private BTNode node;
     private int repeatCount;
     private int currentCount;
+    private bool repeatUntilSuccess;
 
-    public Repeater(BTNode node, int repeatCount = -1) // -1 inseamna infinit
+    public Repeater(BTNode node, int repeatCount = -1, bool repeatUntilSuccess = false)
     {
         this.node = node;
         this.repeatCount = repeatCount;
         this.currentCount = 0;
+        this.repeatUntilSuccess = repeatUntilSuccess;
     }
 
     public override NodeState Evaluate()
@@ -22,9 +22,27 @@ public class Repeater : BTNode
         }
 
         NodeState result = node.Evaluate();
-        if (result == NodeState.SUCCESS || result == NodeState.FAILURE)
+
+        if (repeatUntilSuccess)
         {
-            currentCount++;
+            if (result == NodeState.SUCCESS)
+            {
+                _nodeState = NodeState.SUCCESS;
+                return _nodeState;
+            }
+        }
+        else
+        {
+            if (result == NodeState.FAILURE || result == NodeState.SUCCESS)
+            {
+                currentCount++;
+            }
+
+            if (repeatCount > 0 && currentCount >= repeatCount)
+            {
+                _nodeState = NodeState.SUCCESS;
+                return _nodeState;
+            }
         }
 
         _nodeState = NodeState.RUNNING;

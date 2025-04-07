@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Collectibles\KeyFloat.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyDoor.cs" />
     <Compile Include="Assets\Scripts\Collectibles\UI_KeyHolder.cs" />
+    <Compile Include="Assets\Scripts\Effects\HealEffectController.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Grid.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\NormalCombatNode.cs" />
     <Compile Include="Assets\Scripts\Health\Healthbar.cs" />

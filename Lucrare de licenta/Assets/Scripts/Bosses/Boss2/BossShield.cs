@@ -65,6 +65,12 @@ public class BossShield : MonoBehaviour
             playerRb = null;
             playerTransform = null;
         }
+        else if (collision.CompareTag("Arrow"))
+        {
+            collision.gameObject.SetActive(false);
+            Debug.Log("Projectile blocked by shield!");
+        }
+
     }
 
     private void ApplyRadialPushback()

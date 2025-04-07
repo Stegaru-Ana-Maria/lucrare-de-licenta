@@ -7,6 +7,7 @@ public class Boss2AI : MonoBehaviour
 {
     [Header("Stats")]
     [SerializeField] private float maxHP = 10f;
+    public float currentHP;
     [SerializeField] private float chaseSpeed = 5f;
     [SerializeField] private float jumpForce = 10f;
 
@@ -29,6 +30,8 @@ public class Boss2AI : MonoBehaviour
     [Header("Special Attack - Crystal")]
     [SerializeField] private GameObject crystalPrefab;
     [SerializeField] private Transform crystalSpawnPoint;
+    [SerializeField] private GameObject shieldObject;
+    [SerializeField] private GameObject healEffectPrefab;
 
     private BTNode root;
     private Transform player;
@@ -38,6 +41,7 @@ public class Boss2AI : MonoBehaviour
 
     private bool playerInRoom = false;
     public bool isPerformingSpecialAttack = false;
+    private bool shieldActive = false;
 
 
     void Start()
@@ -53,6 +57,7 @@ public class Boss2AI : MonoBehaviour
         var isPlayerInAttack2Range = new ConditionNode(() => Vector2.Distance(transform.position, player.position) < attack2Range);
         var isPlayerInSpecialAttackRange = new ConditionNode(() => Vector2.Distance(transform.position, player.position) < specialAttackRange);
         var isTooFarForAttack = new ConditionNode(() => Vector2.Distance(transform.position, player.position) > attack1Range);
+        var isTooFarForSpecialAttack = new ConditionNode(() => Vector2.Distance(transform.position, player.position) > specialAttackRange);
 
         var isLowHP = new ConditionNode(() => bossHealth.GetHealth() < maxHP * 0.3f);
         var isBerserk = new ConditionNode(() => bossHealth.GetHealth() < maxHP * 0.15f);
@@ -84,20 +89,42 @@ public class Boss2AI : MonoBehaviour
 
         var specialAttack = new SpecialCrystalAttackNode(
             transform, player, animator, crystalPrefab, crystalSpawnPoint,
-            cooldown: 8f,
+            cooldown: 2f,
             attackDuration: 2.0f,
             specialAttackRange: specialAttackRange,
             playerLayer: LayerMask.GetMask("Player")
         );
 
-        var retreat = new RetreatNode(transform, player, rb, chaseSpeed * 1.2f, attack1Range + 1.5f);
+        var activateShield = new ActionNode(() =>
+        {
+            if (!shieldActive)
+            {
+                shieldObject.SetActive(true);
+                shieldActive = true;
+                Debug.Log("Shield activated.");
+            }
+            return NodeState.SUCCESS;
+        });
+
+        var deactivateShield = new ActionNode(() =>
+        {
+            if (shieldObject != null && shieldObject.activeSelf)
+            {
+                shieldObject.SetActive(false);
+                shieldActive = false;
+                Debug.Log("Shield deactivated.");
+            }
+
+            return NodeState.SUCCESS;
+        });
 
         var heal = new ActionNode(() =>
         {
             bossHealth.Heal(bossHealth.GetMaxHealth() * 0.2f);
+            Instantiate(healEffectPrefab, transform.position, Quaternion.identity);
+            Debug.Log("Boss healed.");
             return NodeState.SUCCESS;
         });
-
 
         var chase = new ChaseNode(transform, player, chaseSpeed, animator, rb, obstacleMask);
 
@@ -115,6 +142,19 @@ public class Boss2AI : MonoBehaviour
         var berserkAttack1 = new CooldownNode(attack1, berserkCooldownTime);
         var berserkAttack2 = new CooldownNode(attack2, berserkCooldownTime);
         #endregion
+
+        var approachAndAttack = new Sequence(new List<BTNode>
+        {
+            new Repeater(
+                new Sequence(new List<BTNode>
+                {
+                    new ConditionNode(() => Vector2.Distance(transform.position, player.position) > specialAttackRange),
+                    chase
+                }),
+                repeatUntilSuccess: true
+                ),
+            crystalCooldown
+        });
 
         #region Subtrees
 
@@ -136,12 +176,10 @@ public class Boss2AI : MonoBehaviour
         var defensiveTree = new Sequence(new List<BTNode>
         {
             isLowHP,
-             new Selector(new List<BTNode>
-             {
-                 // Daca e prea aproape, se retrage
-                new Sequence(new List<BTNode>{new ConditionNode(() => Vector2.Distance(transform.position, player.position) < attack1Range), retreat}),
-                // Daca e la distanta si player-ul e in range, ataca
-                new Sequence(new List<BTNode>{isPlayerInSpecialAttackRange, crystalCooldown}),healCooldownNode,idle})
+            activateShield,
+            approachAndAttack,
+            deactivateShield,
+            heal
         });
 
 
@@ -172,6 +210,8 @@ public class Boss2AI : MonoBehaviour
     void Update()
     {
         root?.Evaluate();
+
+        currentHP = bossHealth.GetHealth();
     }
 
     public float GetHealth()
@@ -182,28 +222,6 @@ public class Boss2AI : MonoBehaviour
     public void SetPlayerInRoom(bool isInRoom)
     {
         playerInRoom = isInRoom;
-    }
-
-    private IEnumerator HandleCrystalAttack()
-    {
-        // 1. Instantiere cristal
-        GameObject crystal = Instantiate(crystalPrefab, crystalSpawnPoint.position, Quaternion.identity);
-
-        // 2. Asteapta pana la frame-ul 12 (~0.13s pe frame * 4 frame-uri = 0.5s)
-        yield return new WaitForSeconds(0.5f); // ajusteaza in functie de framerate-ul animatiei bossului
-
-        // 3. Activeaza animatia de "disappear"
-        Animator crystalAnim = crystal.GetComponent<Animator>();
-        if (crystalAnim != null)
-        {
-            crystalAnim.SetTrigger("disappear");
-        }
-
-        // 4. Asteapta durata animatiei de disparitie (ex: 0.5s)
-        yield return new WaitForSeconds(0.5f);
-
-        // 5. Distruge cristalul
-        Destroy(crystal);
     }
 
     private void OnDrawGizmosSelected()

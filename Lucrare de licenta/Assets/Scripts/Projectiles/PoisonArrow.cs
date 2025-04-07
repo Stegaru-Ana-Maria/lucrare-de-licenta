@@ -26,19 +26,28 @@ public class PoisonArrow : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (hit) return; 
+
         Debug.Log("Arrow hit: " + collision.name);
-        hit = true;
+        /*hit = true;
         boxCollider.enabled = false;
         anim.SetTrigger("impact");
+        */
 
         if (collision.tag == "FlyingEnemy")
         {
+            hit = true;
+            boxCollider.enabled = false;
+            anim.SetTrigger("impact");
             collision.GetComponent<FlyingEnemyHealth>().TakeDamage(1);
             Debug.Log("Arrow hit the enemy!");
         }
 
         if (collision.tag == "Enemy")
         {
+            hit = true;
+            boxCollider.enabled = false;
+            anim.SetTrigger("impact");
             collision.GetComponent<EnemyHealth>().TakeDamage(1);
             Debug.Log("Arrow hit the enemy!");
         }
@@ -49,8 +58,21 @@ public class PoisonArrow : MonoBehaviour
             boxCollider.enabled = false;
             anim.SetTrigger("impact");
         }
+
+        if (collision.CompareTag("Shield"))
+        {
+            hit = true;
+            boxCollider.enabled = false;
+            anim.SetTrigger("impact");
+            Debug.Log("Arrow hit the electric shield!");
+            return;
+        }
+
         if (collision.gameObject.CompareTag("Boss"))
         {
+            hit = true;
+            boxCollider.enabled = false;
+            anim.SetTrigger("impact");
             collision.gameObject.GetComponent<BossHealth>().TakeDamage(3f);
             Debug.Log("Arrow hit the boss!");
         }
