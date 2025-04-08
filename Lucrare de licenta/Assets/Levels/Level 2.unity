@@ -767,8 +767,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 10
+  currentHP: 0
   chaseSpeed: 5
   jumpForce: 10
+  bossSprite: {fileID: 245993289}
+  berserkColor: {r: 1, g: 0, b: 0, a: 1}
   attack1Range: 3
   attack2Range: 2.5
   specialAttackRange: 7

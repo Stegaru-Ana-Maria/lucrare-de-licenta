@@ -7,24 +7,28 @@
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bosses\\boss2\\boss2ai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|c:\\unityprojects\\licenta\\lucrare de licenta\\assets\\scripts\\behavior trees\\repeater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\behavior trees\\repeater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\behavior trees\\bossnodes\\specialcrystalattacknode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\behavior trees\\bossnodes\\specialcrystalattacknode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\projectiles\\poisonarrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\projectiles\\poisonarrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\behavior trees\\bossnodes\\meleeattacknode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\behavior trees\\bossnodes\\meleeattacknode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\behavior trees\\bossnodes\\chasenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\behavior trees\\bossnodes\\chasenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\behavior trees\\actionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\behavior trees\\actionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\behavior trees\\repeater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\behavior trees\\repeater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\behavior trees\\bossnodes\\specialcrystalattacknode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\behavior trees\\bossnodes\\specialcrystalattacknode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\behavior trees\\actionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\behavior trees\\actionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\bosses\\boss2\\bosshealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\behavior trees\\conditionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\behavior trees\\conditionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\behavior trees\\bossnodes\\meleeattacknode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\behavior trees\\bossnodes\\meleeattacknode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\behavior trees\\cooldownnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -182,7 +182,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Repeater.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Behavior Trees\\Repeater.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Behavior Trees\\Repeater.cs",
@@ -190,12 +190,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Behavior Trees\\Repeater.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T21:35:24.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T21:35:24.248Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "BossShield.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Bosses\\Boss2\\BossShield.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bosses\\Boss2\\BossShield.cs",
@@ -203,12 +202,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Bosses\\Boss2\\BossShield.cs",
               "ViewState": "AQIAADMAAAAAAAAAAAASwD8AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T20:46:38.801Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T20:46:38.801Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "BossHealth.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Bosses\\Boss2\\BossHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bosses\\Boss2\\BossHealth.cs",
@@ -216,12 +214,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Bosses\\Boss2\\BossHealth.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAYwAcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T11:17:19.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T11:17:19.505Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "SpecialCrystalAttackNode.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Behavior Trees\\BossNodes\\SpecialCrystalAttackNode.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Behavior Trees\\BossNodes\\SpecialCrystalAttackNode.cs",
@@ -229,8 +226,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Behavior Trees\\BossNodes\\SpecialCrystalAttackNode.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAASwBQAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T14:56:21.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T14:56:21.485Z"
             },
             {
               "$type": "Document",
@@ -240,14 +236,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bosses\\Boss2\\Boss2AI.cs",
               "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Bosses\\Boss2\\Boss2AI.cs",
               "RelativeToolTip": "Assets\\Scripts\\Bosses\\Boss2\\Boss2AI.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAAAawFsAAAAXAAAA",
+              "ViewState": "AQIAALkAAAAAAAAAAAAAAOoAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T17:52:44.225Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "CrystalHitbox.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Bosses\\Boss2\\CrystalHitbox.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bosses\\Boss2\\CrystalHitbox.cs",
@@ -259,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "PlayerAttack2.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Player\\PlayerAttack2.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerAttack2.cs",
@@ -277,39 +273,37 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Projectiles\\PoisonArrow.cs",
               "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Projectiles\\PoisonArrow.cs",
               "RelativeToolTip": "Assets\\Scripts\\Projectiles\\PoisonArrow.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAgwEcAAAAJAAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAAgwEsAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T01:32:22.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T01:32:22.575Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
               "Title": "MeleeAttackNode.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Behavior Trees\\BossNodes\\MeleeAttackNode.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Behavior Trees\\BossNodes\\MeleeAttackNode.cs",
               "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Behavior Trees\\BossNodes\\MeleeAttackNode.cs",
               "RelativeToolTip": "Assets\\Scripts\\Behavior Trees\\BossNodes\\MeleeAttackNode.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwEsAAAAuAAAA",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwEsAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-05T09:54:04.692Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ChaseNode.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Behavior Trees\\BossNodes\\ChaseNode.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Behavior Trees\\BossNodes\\ChaseNode.cs",
               "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Behavior Trees\\BossNodes\\ChaseNode.cs",
               "RelativeToolTip": "Assets\\Scripts\\Behavior Trees\\BossNodes\\ChaseNode.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAIA1wCgAAAAkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T10:51:22.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T10:51:22.447Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ActionNode.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Behavior Trees\\ActionNode.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Behavior Trees\\ActionNode.cs",
@@ -317,12 +311,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Behavior Trees\\ActionNode.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T11:25:02.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T11:25:02.815Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "RetreatNode.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Behavior Trees\\BossNodes\\RetreatNode.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Behavior Trees\\BossNodes\\RetreatNode.cs",
@@ -334,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "HealEffectController.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Effects\\HealEffectController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Effects\\HealEffectController.cs",
@@ -358,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ConditionNode.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Behavior Trees\\ConditionNode.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Behavior Trees\\ConditionNode.cs",

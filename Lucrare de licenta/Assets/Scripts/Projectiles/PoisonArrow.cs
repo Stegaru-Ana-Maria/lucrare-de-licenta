@@ -73,7 +73,7 @@ public class PoisonArrow : MonoBehaviour
             hit = true;
             boxCollider.enabled = false;
             anim.SetTrigger("impact");
-            collision.gameObject.GetComponent<BossHealth>().TakeDamage(3f);
+            collision.gameObject.GetComponent<BossHealth>().TakeDamage(2.5f);
             Debug.Log("Arrow hit the boss!");
         }
 

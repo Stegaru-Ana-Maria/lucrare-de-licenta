@@ -10,6 +10,8 @@ public class Boss2AI : MonoBehaviour
     public float currentHP;
     [SerializeField] private float chaseSpeed = 5f;
     [SerializeField] private float jumpForce = 10f;
+    [SerializeField] private SpriteRenderer bossSprite;
+    [SerializeField] private Color berserkColor = Color.red;
 
     [Header("Ranges")]
     [SerializeField] private float attack1Range = 3.5f;
@@ -60,7 +62,14 @@ public class Boss2AI : MonoBehaviour
         var isTooFarForSpecialAttack = new ConditionNode(() => Vector2.Distance(transform.position, player.position) > specialAttackRange);
 
         var isLowHP = new ConditionNode(() => bossHealth.GetHealth() < maxHP * 0.3f);
-        var isBerserk = new ConditionNode(() => bossHealth.GetHealth() < maxHP * 0.15f);
+        var isBerserk = new ConditionNode(() => bossHealth.GetHealth() <= maxHP * 0.15f);
+
+        var isInDefensiveZone = new ConditionNode(() =>
+        {
+            float hp = bossHealth.GetHealth();
+            return hp <= maxHP * 0.3f && hp > maxHP * 0.15f;
+        });
+
         #endregion
 
         #region Actions
@@ -72,7 +81,8 @@ public class Boss2AI : MonoBehaviour
             damage: 1f,
             knockbackForce: 5f,
             playerLayer: playerLayer,
-            attackRange: attack1Range
+            attackRange: attack1Range,
+            damageFrameRatio: 3f / 7f
         );
 
         var attack2 = new MeleeAttackNode(
@@ -89,7 +99,7 @@ public class Boss2AI : MonoBehaviour
 
         var specialAttack = new SpecialCrystalAttackNode(
             transform, player, animator, crystalPrefab, crystalSpawnPoint,
-            cooldown: 2f,
+            cooldown: 3f,
             attackDuration: 2.0f,
             specialAttackRange: specialAttackRange,
             playerLayer: LayerMask.GetMask("Player")
@@ -128,6 +138,20 @@ public class Boss2AI : MonoBehaviour
 
         var chase = new ChaseNode(transform, player, chaseSpeed, animator, rb, obstacleMask);
 
+        var setBerserkSpeed = new ActionNode(() =>
+        {
+            chase.SetSpeed(chaseSpeed * 2f); 
+            return NodeState.SUCCESS;
+        });
+
+        var enterBerserk = new ActionNode(() =>
+        {
+            if (bossSprite != null)
+                bossSprite.color = berserkColor;
+            Debug.Log("Entered Berserk Mode!");
+            return NodeState.SUCCESS;
+        });
+
         var idle = new ActionNode(() =>
         {
             animator.SetBool("isRunning", false);
@@ -159,23 +183,40 @@ public class Boss2AI : MonoBehaviour
         #region Subtrees
 
         // --- Berserk ---
-        var berserkAttack = new Selector(new List<BTNode>
-        {
-            new Sequence(new List<BTNode> { isPlayerInAttack1Range, berserkAttack1 }),
-            new Sequence(new List<BTNode> { isPlayerInAttack2Range, berserkAttack2 }),
-            new Sequence(new List<BTNode> { isPlayerInSpecialAttackRange, berserkCrystal })
-        });
 
         var berserkTree = new Sequence(new List<BTNode>
         {
             isBerserk,
-            berserkAttack
+            enterBerserk,
+            setBerserkSpeed,
+            new Repeater(
+            new Selector(new List<BTNode>
+            {
+                new Sequence(new List<BTNode>
+                {
+                    isPlayerInAttack2Range,
+                    berserkAttack2
+                }),
+                new Sequence(new List<BTNode>
+                {
+                    isPlayerInAttack1Range,
+                    berserkAttack1
+                }),
+                new Sequence(new List<BTNode>
+                {
+                    isPlayerInSpecialAttackRange,
+                    berserkCrystal
+                }),
+                chase
+            }),
+            repeatUntilSuccess: false
+            )
         });
 
         // --- Defensive ---
         var defensiveTree = new Sequence(new List<BTNode>
         {
-            isLowHP,
+            isInDefensiveZone,
             activateShield,
             approachAndAttack,
             deactivateShield,

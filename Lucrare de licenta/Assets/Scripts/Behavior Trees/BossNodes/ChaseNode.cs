@@ -13,6 +13,11 @@ public class ChaseNode : BTNode
     private float obstacleCheckDistance = 2.0f;
     private float groundCheckDistance = 1.5f;
 
+    public void SetSpeed(float chaseSpeed)
+    {
+        speed = chaseSpeed;
+    }
+
     public ChaseNode(Transform bossTransform, Transform playerTransform, float speed, Animator animator, Rigidbody2D rb, LayerMask obstacleMask)
     {
         this.bossTransform = bossTransform;
