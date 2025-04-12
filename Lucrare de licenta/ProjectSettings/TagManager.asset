@@ -19,6 +19,7 @@ TagManager:
   - FlyingEnemy
   - Boss
   - Shield
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -40,7 +41,7 @@ TagManager:
   - Arrow
   - Boss
   - Shield
-  - 
+  - Projectile
   - 
   - 
   - 

@@ -94,8 +94,10 @@
     <Compile Include="Assets\Scripts\LadderMovement.cs" />
     <Compile Include="Assets\Scripts\Enemies\EnemyState.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bee\FlyingPatrolState.cs" />
+    <Compile Include="Assets\Scripts\Projectiles\SpearVisualController.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyHolder.cs" />
     <Compile Include="Assets\Scripts\Bosses\Boss2\Boss2AI.cs" />
+    <Compile Include="Assets\Scripts\Projectiles\Spear.cs" />
     <Compile Include="Assets\Scripts\Enemies\Bee\FlyingEnemyFSM.cs" />
     <Compile Include="Assets\Scripts\Projectiles\PoisonArrow.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
@@ -112,6 +114,7 @@
     <Compile Include="Assets\Scripts\Collectibles\Key.cs" />
     <Compile Include="Assets\Scripts\Enemies\ChaseState.cs" />
     <Compile Include="Assets\Scripts\Traps\Lava.cs" />
+    <Compile Include="Assets\Scripts\Projectiles\ShooterFinal.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\ConditionNode.cs" />
     <Compile Include="Assets\Scripts\Health\Health.cs" />
     <Compile Include="Assets\Scripts\Enemies\PatrolState.cs" />
