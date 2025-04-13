@@ -41,7 +41,7 @@ public class Spear : MonoBehaviour
 
     private void Update()
     {
-        if (hasHitSomething) return;
+        if (hasHitSomething || target == null) return;
 
         UpdateProjectilePosition();
 
@@ -54,6 +54,8 @@ public class Spear : MonoBehaviour
 
     private void UpdateProjectilePosition()
     {
+        if (target == null) return;
+
         trajectoryRange = target.position - trajectoryStartPoint;
 
         // Projectile will be curved on the X axis
@@ -150,8 +152,10 @@ public class Spear : MonoBehaviour
         this.projectileSpeedAnimationCurve = projectileSpeedAnimationCurve;
     }
 
-    private void OnCollisionEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (hasHitSomething) return;
+
         if (collision.CompareTag("Player"))
         {
             Health playerHealth = collision.GetComponent<Health>();
@@ -171,13 +175,16 @@ public class Spear : MonoBehaviour
             {
                 rb.linearVelocity = Vector2.zero;
                 rb.angularVelocity = 0f;
-                rb.bodyType = RigidbodyType2D.Static;
+                rb.bodyType = RigidbodyType2D.Kinematic;
+                //rb.bodyType = RigidbodyType2D.Static;
+                //rb.constraints = RigidbodyConstraints2D.FreezeAll;
             }
 
             Collider2D col = GetComponent<Collider2D>();
             if (col != null)
             {
-                col.enabled = false;
+                col.isTrigger = true;
+                //col.enabled = false;
             }
 
             if (spearVisual != null)
@@ -185,6 +192,11 @@ public class Spear : MonoBehaviour
                 spearVisual.transform.rotation = Quaternion.identity;
             }
         }
+    }
+
+    public bool HasHitSomething()
+    {
+        return hasHitSomething;
     }
 
 

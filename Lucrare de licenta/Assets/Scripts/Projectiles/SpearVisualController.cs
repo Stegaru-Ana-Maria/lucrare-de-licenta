@@ -21,6 +21,8 @@ public class SpearVisualController : MonoBehaviour
 
     private void Update()
     {
+        if (spear != null && spear.HasHitSomething()) return;
+
         UpdateProjectileRotation();
 
     }
