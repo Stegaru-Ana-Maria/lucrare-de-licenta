@@ -20,6 +20,7 @@ TagManager:
   - Boss
   - Shield
   - Spear
+  - Crystal
   layers:
   - Default
   - TransparentFX
@@ -42,7 +43,7 @@ TagManager:
   - Boss
   - Shield
   - Spear
-  - 
+  - Crystal
   - 
   - 
   - 

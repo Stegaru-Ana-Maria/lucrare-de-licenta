@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class ShooterFinal : MonoBehaviour
+public class BossSpearThrow : MonoBehaviour
 {
     [Header("Projectile Settings")]
     [SerializeField] private GameObject projectilePrefab;
@@ -20,16 +20,36 @@ public class ShooterFinal : MonoBehaviour
     private float shootTimer;
     private bool hasSpear = true;
 
+    public bool HasSpear => hasSpear;
+
+    private void Start()
+    {
+        shootTimer = 0f; 
+    }
+
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
+    }
+
+    public bool TryShoot()
+    {
+        Debug.Log($"TryShoot() called | hasSpear: {hasSpear}, shootTimer: {shootTimer}");
+
+        if (hasSpear && shootTimer <= 0f)
+        {
+            Debug.Log("Shooting spear!");
+            ShootSpear();
+            shootTimer = shootRate;
+            return true;
+        }
+
+        return false;
+    }
 
     private void Update()
     {
         shootTimer -= Time.deltaTime;
-
-        if (hasSpear && shootTimer <= 0f)
-        {
-            ShootSpear();
-            shootTimer = shootRate;
-        }
     }
 
     private void ShootSpear()

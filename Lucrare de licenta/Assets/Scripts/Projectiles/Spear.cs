@@ -32,7 +32,7 @@ public class Spear : MonoBehaviour
     private float nextPositionXCorrectionAbsolute;
 
     private bool hasHitSomething = false;
-
+    private bool isRecoverable = false;
 
     private void Start()
     {
@@ -48,7 +48,7 @@ public class Spear : MonoBehaviour
 
         if (Vector3.Distance(transform.position, target.position) < destroyDistanceThreshold)
         {
-            Destroy(gameObject);
+            FallToGround();
         }
     }
 
@@ -152,6 +152,31 @@ public class Spear : MonoBehaviour
         this.projectileSpeedAnimationCurve = projectileSpeedAnimationCurve;
     }
 
+    private void FallToGround()
+    {
+        hasHitSomething = true;
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic; 
+            rb.gravityScale = 2f; 
+            rb.linearVelocity = Vector2.zero;
+        }
+
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            col.isTrigger = false;
+        }
+
+        if (spearVisual != null)
+        {
+            spearVisual.transform.rotation = Quaternion.identity;
+        }
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (hasHitSomething) return;
@@ -163,12 +188,20 @@ public class Spear : MonoBehaviour
             {
                 playerHealth.TakeDamage(damageAmount);
             }
-
-            Destroy(gameObject);
+            FallToGround();
+            isRecoverable = true;
+            /*
+            GOAPAgent agent = FindFirstObjectByType<GOAPAgent>(); 
+            if (agent != null)
+            {
+                agent.worldState.SetState("spearOnGround", true);
+            }
+            */
         }
         else if (collision.CompareTag("Ground"))
         {
             hasHitSomething = true;
+            isRecoverable = true;
 
             Rigidbody2D rb = GetComponent<Rigidbody2D>();
             if (rb != null)
@@ -176,22 +209,31 @@ public class Spear : MonoBehaviour
                 rb.linearVelocity = Vector2.zero;
                 rb.angularVelocity = 0f;
                 rb.bodyType = RigidbodyType2D.Kinematic;
-                //rb.bodyType = RigidbodyType2D.Static;
-                //rb.constraints = RigidbodyConstraints2D.FreezeAll;
             }
 
             Collider2D col = GetComponent<Collider2D>();
             if (col != null)
             {
                 col.isTrigger = true;
-                //col.enabled = false;
             }
 
             if (spearVisual != null)
             {
                 spearVisual.transform.rotation = Quaternion.identity;
             }
+            /*
+            GOAPAgent agent = FindFirstObjectByType<GOAPAgent>();
+            if (agent != null)
+            {
+                agent.worldState.SetState("spearOnGround", true);
+            }
+            */
         }
+    }
+
+    public bool IsRecoverable()
+    {
+        return isRecoverable;
     }
 
     public bool HasHitSomething()
@@ -227,6 +269,11 @@ public class Spear : MonoBehaviour
     public float GetNextPositionXCorrectionAbsolute()
     {
         return nextPositionXCorrectionAbsolute;
+    }
+
+    public Vector3 GetSpearPosition()
+    {
+        return transform.position;
     }
 
 
