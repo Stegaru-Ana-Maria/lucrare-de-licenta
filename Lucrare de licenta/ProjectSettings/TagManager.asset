@@ -21,6 +21,8 @@ TagManager:
   - Shield
   - Spear
   - Crystal
+  - NPC
+  - Teleporter
   layers:
   - Default
   - TransparentFX
@@ -44,7 +46,7 @@ TagManager:
   - Shield
   - Spear
   - Crystal
-  - 
+  - NPC
   - 
   - 
   - 
@@ -66,6 +68,9 @@ TagManager:
     locked: 0
   - name: Door
     uniqueID: 1526625335
+    locked: 0
+  - name: NPC
+    uniqueID: 1280173335
     locked: 0
   - name: Player
     uniqueID: 789409171

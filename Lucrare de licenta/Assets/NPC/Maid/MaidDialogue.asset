@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e480c8cf9064a2d4ea80460b2162dab1, type: 3}
+  m_Name: MaidDialogue
+  m_EditorClassIdentifier: 
+  npcName: Maid
+  npcPortrait: {fileID: 21300000, guid: 5a65d18af07a74949975bf42225860ad, type: 3}
+  dialogLines:
+  - Oh! You're not from around here, are you?
+  - This castle is full of secrets... and danger.
+  - If you're looking to reach the final chamber, you'll need the magical book.
+  - It's hidden deep in the basement. Be careful down there.
+  - Once you find it, bring it to the wizard in the library. He'll know what to do.
+  autoProgressLines: 00000000
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
