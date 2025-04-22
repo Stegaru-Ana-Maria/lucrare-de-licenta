@@ -127,6 +127,7 @@
     <Compile Include="Assets\Scripts\PlayerTeleport.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Node.cs" />
     <Compile Include="Assets\Scripts\Bosses\Boss2\BossShield.cs" />
+    <Compile Include="Assets\UI Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\NPC\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Enemies\AttackState.cs" />
     <Compile Include="Assets\Scripts\Collectibles\Key.cs" />

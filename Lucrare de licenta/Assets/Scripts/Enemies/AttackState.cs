@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AttackState : EnemyState
 {
-    private float cooldownTimer = 0;
+    private float cooldownTimer = 2;
     private bool canDealDamage;
 
     public AttackState(EnemyFSM enemy) : base(enemy) { }
