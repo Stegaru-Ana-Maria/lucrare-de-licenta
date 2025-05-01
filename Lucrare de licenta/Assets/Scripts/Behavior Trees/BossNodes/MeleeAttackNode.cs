@@ -62,6 +62,7 @@ public class MeleeAttackNode : BTNode
 
     private void StartAttack(float time)
     {
+        SoundEffectManager.Play("Hammer");
         animator.SetTrigger(animationTrigger);
         attackStartTime = time;
         hasDealtDamage = false;

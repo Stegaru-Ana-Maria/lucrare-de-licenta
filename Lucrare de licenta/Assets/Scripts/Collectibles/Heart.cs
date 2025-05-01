@@ -8,6 +8,7 @@ public class Heart : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            SoundEffectManager.Play("CollectHeart");
             collision.GetComponent<Health>().AddHealth(healthValue);
             gameObject.SetActive(false);
         }

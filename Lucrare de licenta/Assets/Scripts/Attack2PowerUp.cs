@@ -6,6 +6,7 @@ public class Attack2PowerUp : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            SoundEffectManager.Play("PowerUp");
             collision.GetComponent<PlayerAttack2>().ActivateArrowPowerUp();
             Destroy(gameObject); 
         }

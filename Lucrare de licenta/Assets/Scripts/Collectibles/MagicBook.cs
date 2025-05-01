@@ -9,6 +9,7 @@ public class MagicBook : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             hasCollectedBook = true;
+            SoundEffectManager.Play("ItemCollected");
             Debug.Log("Player has collected the magic book!");
             Destroy(gameObject);
         }

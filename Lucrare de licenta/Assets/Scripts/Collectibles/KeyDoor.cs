@@ -21,6 +21,7 @@ public class KeyDoor : MonoBehaviour
     {
         if (!isOpen)
         {
+            SoundEffectManager.Play("UnlockDoor");
             animator.SetTrigger("open"); 
             isOpen = true;
             UnlockNextLevel();

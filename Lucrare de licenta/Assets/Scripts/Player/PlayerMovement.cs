@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
             anim.SetTrigger("jump");
+            SoundEffectManager.Play("Jump");
         }
 
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)

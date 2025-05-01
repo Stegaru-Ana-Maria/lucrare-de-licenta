@@ -2,13 +2,44 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    private PlayerRespawn respawn;
+    private bool playerNear = false;
+    private bool isActivated = false;
+    private Animator animator;
+    public Transform respawnPoint;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void Start()
     {
-        if (other.CompareTag("Player"))
+        animator = GetComponent<Animator>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
-            other.GetComponent<PlayerRespawn>().UpdateCheckpoint(transform.position);
+            playerNear = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            playerNear = false;
+        }
+    }
+    void Update()
+    {
+        if (playerNear && Input.GetKeyDown(KeyCode.F) && !isActivated)
+        {
+            isActivated = true;
+            animator.SetBool("isActivated", true);
+            SoundEffectManager.Play("Checkpoint");
+            respawnPoint.transform.position = transform.position;
+        }
+
+        if (respawnPoint.transform.position != transform.position)
+        {
+            isActivated = false;
+            animator.SetBool("isActivated", false);
         }
     }
 }

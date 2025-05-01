@@ -100,5 +100,6 @@ public class ChaseNode : BTNode
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         animator.SetTrigger("jump");
+        SoundEffectManager.Play("EnemyJump");
     }
 }

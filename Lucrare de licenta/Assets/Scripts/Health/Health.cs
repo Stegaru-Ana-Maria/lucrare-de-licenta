@@ -25,6 +25,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth > 0)
         {
+            SoundEffectManager.Play("Hurt");
             anim.SetTrigger("hurt");
         }
         else
