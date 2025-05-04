@@ -14,7 +14,7 @@ public class FlyingChaseState : FlyingEnemyState
 
     public override void EnterState()
     {
-        Debug.Log("Intrat în starea de urmarire");
+        Debug.Log("Enter: ChaseState");
         lastPlayerPosition = enemy.player.position;
         RequestPathToPlayer();
     }
@@ -25,7 +25,7 @@ public class FlyingChaseState : FlyingEnemyState
 
         if (Vector2.Distance(enemy.enemy.position, enemy.player.position) > enemy.stopChaseDistance)
         {
-            enemy.ChangeState(new FlyingPatrolState(enemy));
+            enemy.ChangeState(new ReturnToPatrolState(enemy));
             return;
         }
 
@@ -60,6 +60,7 @@ public class FlyingChaseState : FlyingEnemyState
 
     public override void ExitState()
     {
-        Debug.Log("Inamicul a iesit din starea de urmarire");
+        Debug.Log("Exit: ChaseState");
+        pathFollower.StopPathFollowing();
     }
 }

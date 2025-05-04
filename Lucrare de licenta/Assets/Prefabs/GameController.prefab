@@ -439,6 +439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8034d1a4afd754f49a4f2fb61b75b3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuMusic: {fileID: 8300000, guid: 710b5005492300143be6d397ccdab8f1, type: 3}
-  levelMusic: {fileID: 8300000, guid: e9343546203e66c4aa87f19d3697043f, type: 3}
+  menuMusic: {fileID: 8300000, guid: 0f461c8517e38e445bd6f630373d084e, type: 3}
+  levelMusic: {fileID: 8300000, guid: 85db87e75ee34274fa9e462eb8f622c2, type: 3}
   musicSlider: {fileID: 0}

@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\Traps\Spikes.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\ParallelNode.cs" />
     <Compile Include="Assets\Scripts\Bosses\Boss2\BossHealth.cs" />
+    <Compile Include="Assets\Scripts\FSM\Bee\ReturnToPatrolState.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\Inverter.cs" />
     <Compile Include="Assets\Scripts\Bosses\Boss2\CrystalHitbox.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\ActionNode.cs" />

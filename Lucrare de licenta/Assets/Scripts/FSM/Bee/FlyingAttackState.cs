@@ -15,7 +15,7 @@ public class FlyingAttackState : FlyingEnemyState
 
     public override void EnterState()
     {
-        Debug.Log("Intrat în starea de atac");
+        Debug.Log("Enter: AttackState");
         enemy.anim.SetTrigger("attack");
         lastAttackTime = Time.time;
 
@@ -35,6 +35,9 @@ public class FlyingAttackState : FlyingEnemyState
         }
     }
 
-    public override void ExitState() { }
+    public override void ExitState() 
+    {
+        Debug.Log("Exit: AttackState");
+    }
 }
 

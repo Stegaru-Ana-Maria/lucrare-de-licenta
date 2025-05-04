@@ -9,11 +9,6 @@ public class Unit : MonoBehaviour
     Vector2[] path;
     int targetIndex;
 
-    void Start()
-    {
-        PathRequestManager.RequestPath(transform.position, target.position, OnPathFound);
-    }
-
     public void OnPathFound(Vector2[] newPath, bool pathSuccessful)
     {
         if (pathSuccessful)
@@ -46,6 +41,13 @@ public class Unit : MonoBehaviour
             yield return null;
         }
     }
+
+    public void StopPathFollowing()
+    {
+        StopCoroutine("FollowPath");
+        path = null;
+    }
+
 
     public void OnDrawGizmos()
     {

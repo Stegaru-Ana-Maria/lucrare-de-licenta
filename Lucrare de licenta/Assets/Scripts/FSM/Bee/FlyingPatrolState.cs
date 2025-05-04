@@ -10,7 +10,7 @@ public class FlyingPatrolState : FlyingEnemyState
 
     public override void EnterState()
     {
-        Debug.Log("Intrat în starea de patrulare");
+        Debug.Log("Enter: PatrolState");
         targetPoint = enemy.patrolPointB.position;
     }
 
@@ -50,7 +50,7 @@ public class FlyingPatrolState : FlyingEnemyState
 
     public override void ExitState() 
     {
-        Debug.Log("Inamicul a iesit din starea de patrulare");
+        Debug.Log("Exit: PatrolState");
     }
 
 }

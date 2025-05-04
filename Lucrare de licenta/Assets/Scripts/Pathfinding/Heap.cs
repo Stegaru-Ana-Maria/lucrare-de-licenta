@@ -91,7 +91,7 @@ public class Heap<T> where T : IHeapItem<T>
     {
         int parentIndex = (item.HeapIndex - 1) / 2;
 
-        while (true)
+        while (parentIndex >= 0)
         {
             T parentItem = items[parentIndex];
             if (item.CompareTo(parentItem) > 0)

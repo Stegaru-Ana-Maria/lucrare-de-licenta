@@ -92,4 +92,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossAI: {fileID: 0}
-  bossMusic: {fileID: 8300000, guid: 36453a49a87db374caac043f8ddb9aac, type: 3}
+  bossMusic: {fileID: 8300000, guid: 71e9044fc7d7bc248b48789fd92080b5, type: 3}

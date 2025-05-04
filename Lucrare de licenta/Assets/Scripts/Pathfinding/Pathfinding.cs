@@ -34,6 +34,8 @@ public class Pathfinding : MonoBehaviour
             HashSet<Node> closedSet = new HashSet<Node>();
             openSet.Add(startNode);
 
+            int iterations = 0;
+
             while (openSet.Count > 0)
             {
                 Node node = openSet.RemoveFirst();
@@ -65,6 +67,13 @@ public class Pathfinding : MonoBehaviour
                             openSet.UpdateItem(neighbour);
                     }
                 }
+
+                iterations++;
+                if (iterations > 100) 
+                {
+                    iterations = 0;
+                    yield return null;
+                }
             }
         }
         yield return null;
@@ -85,6 +94,11 @@ public class Pathfinding : MonoBehaviour
         {
             path.Add(currentNode);
             currentNode = currentNode.parent;
+        }
+
+        foreach (Node n in path)
+        {
+            UnityEngine.Debug.DrawLine(n.worldPosition, n.parent?.worldPosition ?? n.worldPosition, Color.cyan, 1f);
         }
 
         Vector2[] waypoints = SimplifyPath(path);
