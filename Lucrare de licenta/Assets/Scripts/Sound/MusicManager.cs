@@ -50,12 +50,21 @@ public class MusicManager : MonoBehaviour
 
     void Start()
     {
-        musicSlider.onValueChanged.AddListener(delegate { SetVolume(musicSlider.value); });
+        float savedVolume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+        audioSource.volume = savedVolume;
+
+        if (musicSlider != null)
+        {
+            musicSlider.value = savedVolume;
+            musicSlider.onValueChanged.AddListener(delegate { SetVolume(musicSlider.value); });
+        }
     }
 
     public static void SetVolume(float volume)
     {
         Instance.audioSource.volume = volume;
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+        PlayerPrefs.Save();
     }
 
     public void PlayBackroundMusic(bool resetSong, AudioClip audioClip = null)

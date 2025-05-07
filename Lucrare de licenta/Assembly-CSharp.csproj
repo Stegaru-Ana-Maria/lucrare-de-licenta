@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\GOAP\Actions\ThrowSpearAction.cs" />
     <Compile Include="Assets\Scripts\FSM\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\FSM\EnemyState.cs" />
+    <Compile Include="Assets\Scripts\NPC\IDialogueNPC.cs" />
     <Compile Include="Assets\Scripts\Collectibles\MagicBook.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\Selector.cs" />
     <Compile Include="Assets\Scripts\Sound\SoundEffectManager.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Assets\Scripts\Bosses\Boss2\Boss2AI.cs" />
     <Compile Include="Assets\Scripts\Sound\MusicManager.cs" />
     <Compile Include="Assets\Scripts\Projectiles\Spear.cs" />
+    <Compile Include="Assets\Scripts\NPC\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Projectiles\PoisonArrow.cs" />
     <Compile Include="Assets\Scripts\FSM\Bee\FlyingPatrolState.cs" />
     <Compile Include="Assets\Scripts\Bosses\Boss1\BossSpearThrow.cs" />

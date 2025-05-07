@@ -4,13 +4,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPCWizard : MonoBehaviour, IInteractable
+public class NPCWizard : MonoBehaviour, IInteractable, IDialogueNPC
 {
     [Header("Dialogue Settings")]
     public NPCDialogue dialogueData;
-    public GameObject dialoguePanel;
-    public TMP_Text dialogueText, nameText, intructionText;
-    public Image portraitImage;
+    public TMP_Text intructionText;
 
     [Header("Wizard & Portal")]
     public Animator wizardAnimator;
@@ -20,8 +18,10 @@ public class NPCWizard : MonoBehaviour, IInteractable
     private const KeyCode giveBookKey = KeyCode.Q;
 
     private int dialogueIndex;
-    private bool isTyping;
     private bool isDialogueActive;
+
+    public NPCDialogue DialogueData => dialogueData;
+    public int DialogueIndex => dialogueIndex;
 
     public bool CanInteract() => !isDialogueActive;
 
@@ -52,59 +52,31 @@ public class NPCWizard : MonoBehaviour, IInteractable
     {
         isDialogueActive = true;
         dialogueIndex = 0;
-
-        nameText.SetText(dialogueData.npcName);
-        portraitImage.sprite = dialogueData.npcPortrait;
-
-        dialoguePanel.SetActive(true);
-        PauseController.SetPause(true);
-
-        StartCoroutine(TypeLine());
+        DialogueManager.Instance.StartDialogue(this);
     }
     void NextLine()
     {
-        if (isTyping)
+        if (DialogueManager.Instance.IsTyping)
         {
-            StopAllCoroutines();
-            dialogueText.SetText(dialogueData.dialogLines[dialogueIndex]);
-            isTyping = false;
+            DialogueManager.Instance.DisplayFullLine();
         }
-        else if (dialogueIndex < dialogueData.dialogLines.Length)
+        else if (++dialogueIndex < dialogueData.dialogLines.Length)
         {
-            StartCoroutine(TypeLine());
+            DialogueManager.Instance.StartDialogue(this);
         }
         else
         {
             EndDialogue();
         }
     }
-
-    IEnumerator TypeLine()
+    void IDialogueNPC.NextLine()
     {
-        isTyping = true;
-        dialogueText.SetText("");
-
-        foreach (char letter in dialogueData.dialogLines[dialogueIndex])
-        {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(dialogueData.typingSpeed);
-        }
-
-        isTyping = false;
-
-        if (dialogueData.autoProgressLines.Length > dialogueIndex && dialogueData.autoProgressLines[dialogueIndex])
-        {
-            yield return new WaitForSeconds(dialogueData.autoProgressDelay);
-            NextLine();
-        }
+        NextLine();
     }
+
     public void EndDialogue()
     {
-        StopAllCoroutines();
         isDialogueActive = false;
-        dialogueText.SetText("");
-        dialoguePanel.SetActive(false);
-        PauseController.SetPause(false);
     }
     IEnumerator PerformSpellSequence()
     {

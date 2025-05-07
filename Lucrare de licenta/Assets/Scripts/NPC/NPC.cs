@@ -4,15 +4,15 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NPC : MonoBehaviour, IInteractable
+public class NPC : MonoBehaviour, IInteractable, IDialogueNPC
 {
     public NPCDialogue dialogueData;
-    public GameObject dialoguePanel;
-    public TMP_Text dialogueText, nameText;
-    public Image portraitImage;
 
     private int dialogueIndex;
-    private bool isTyping, isDialogueActive;
+    private bool isDialogueActive;
+
+    public NPCDialogue DialogueData => dialogueData;
+    public int DialogueIndex => dialogueIndex;
     public bool CanInteract()
     {
         return !isDialogueActive;
@@ -37,26 +37,17 @@ public class NPC : MonoBehaviour, IInteractable
     {
         isDialogueActive = true;
         dialogueIndex = 0;
-
-        nameText.SetText(dialogueData.npcName);
-        portraitImage.sprite = dialogueData.npcPortrait;
-
-        dialoguePanel.SetActive(true);
-        PauseController.SetPause(true);
-
-        StartCoroutine(TypeLine());
+        DialogueManager.Instance.StartDialogue(this);
     }
     void NextLine()
     {
-        if (isTyping)
+        if (DialogueManager.Instance.IsTyping)
         {
-            StopAllCoroutines();
-            dialogueText.SetText(dialogueData.dialogLines[dialogueIndex]);
-            isTyping = false;
+            DialogueManager.Instance.DisplayFullLine();
         }
-        else if(++dialogueIndex < dialogueData.dialogLines.Length)
+        else if (++dialogueIndex < dialogueData.dialogLines.Length)
         {
-            StartCoroutine(TypeLine());
+            DialogueManager.Instance.StartDialogue(this);
         }
         else
         {
@@ -64,31 +55,13 @@ public class NPC : MonoBehaviour, IInteractable
         }
     }
 
-    IEnumerator TypeLine()
+    void IDialogueNPC.NextLine()
     {
-        isTyping = true;
-        dialogueText.SetText("");
-
-        foreach(char letter in dialogueData.dialogLines[dialogueIndex])
-        {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(dialogueData.typingSpeed);
-        }
-
-        isTyping = false;
-
-        if(dialogueData.autoProgressLines.Length > dialogueIndex && dialogueData.autoProgressLines[dialogueIndex])
-        {
-            yield return new WaitForSeconds(dialogueData.autoProgressDelay);
-            NextLine();
-        }
+        NextLine();
     }
+
     public void EndDialogue()
     {
-        StopAllCoroutines();
         isDialogueActive = false;
-        dialogueText.SetText("");
-        dialoguePanel.SetActive(false);
-        PauseController.SetPause(false);
     }
 }
