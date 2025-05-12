@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Health\Healthbar.cs" />
     <Compile Include="Assets\Scripts\NPC\NPCWizard.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BTNode.cs" />
+    <Compile Include="Assets\Scripts\Progress Saving\SaveProgressManager.cs" />
     <Compile Include="Assets\Scripts\GOAP\Actions\ThrowSpearAction.cs" />
     <Compile Include="Assets\Scripts\FSM\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\FSM\EnemyState.cs" />
@@ -104,8 +105,10 @@
     <Compile Include="Assets\Scripts\GOAP\WorldState\WorldState.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\CooldownNode.cs" />
     <Compile Include="Assets\Scripts\GOAP\Goals\Goal.cs" />
+    <Compile Include="Assets\Scripts\Progress Saving\SaveFileDataWriter.cs" />
     <Compile Include="Assets\Scripts\Projectiles\SpearThrowTest.cs" />
     <Compile Include="Assets\Scripts\Sound\SoundEffectLibrary.cs" />
+    <Compile Include="Assets\Scripts\Progress Saving\LevelProgressionData.cs" />
     <Compile Include="Assets\Scripts\FSM\PatrolState.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\PathRequestManager.cs" />
     <Compile Include="Assets\Scripts\Game Utility\NextLevelTrigger.cs" />
