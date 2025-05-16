@@ -68,7 +68,6 @@
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\SpecialCrystalAttackNode.cs" />
     <Compile Include="Assets\Scripts\Game Utility\PlayerTeleport.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\RetreatNode.cs" />
-    <Compile Include="Assets\Scripts\Collectibles\Heart.cs" />
     <Compile Include="Assets\Scripts\PauseController.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyFloat.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyDoor.cs" />
@@ -81,6 +80,7 @@
     <Compile Include="Assets\Scripts\Behavior Trees\BTNode.cs" />
     <Compile Include="Assets\Scripts\Progress Saving\SaveProgressManager.cs" />
     <Compile Include="Assets\Scripts\GOAP\Actions\ThrowSpearAction.cs" />
+    <Compile Include="Assets\Scripts\Interactive Obj\Attack2Unlock.cs" />
     <Compile Include="Assets\Scripts\FSM\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\FSM\EnemyState.cs" />
     <Compile Include="Assets\Scripts\NPC\IDialogueNPC.cs" />
@@ -110,6 +110,7 @@
     <Compile Include="Assets\Scripts\Sound\SoundEffectLibrary.cs" />
     <Compile Include="Assets\Scripts\Progress Saving\LevelProgressionData.cs" />
     <Compile Include="Assets\Scripts\FSM\PatrolState.cs" />
+    <Compile Include="Assets\Scripts\Interactive Obj\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\PathRequestManager.cs" />
     <Compile Include="Assets\Scripts\Game Utility\NextLevelTrigger.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
@@ -146,14 +147,14 @@
     <Compile Include="Assets\Scripts\Traps\Lava.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\ConditionNode.cs" />
     <Compile Include="Assets\Scripts\Health\Health.cs" />
-    <Compile Include="Assets\Scripts\Attack2PowerUp.cs" />
+    <Compile Include="Assets\Scripts\GameSession.cs" />
+    <Compile Include="Assets\Scripts\Interactive Obj\HeartPickup.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Unit.cs" />
     <Compile Include="Assets\Scripts\FSM\Bee\FlyingChaseState.cs" />
     <Compile Include="Assets\Scripts\Game Utility\Teleport.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\Sequence.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Heap.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\BossHealthNode.cs" />
-    <Compile Include="Assets\Scripts\Checkpoint\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\NPC\NPC.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\PauseMenu.cs" />

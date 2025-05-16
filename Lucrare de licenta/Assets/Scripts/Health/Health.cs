@@ -3,6 +3,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
+    public float StartingHealth => startingHealth;
     public float currentHealth { get; private set; }
     private Animator anim;
     private bool dead;

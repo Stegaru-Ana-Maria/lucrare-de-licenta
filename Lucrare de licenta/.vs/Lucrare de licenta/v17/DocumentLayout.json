@@ -3,15 +3,43 @@
   "WorkspaceRootPath": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|c:\\unityprojects\\licenta\\lucrare de licenta\\assets\\scripts\\gamesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamesession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\player\\playerattack2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerattack2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\interactive obj\\attack2unlock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactive obj\\attack2unlock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\interactive obj\\heartpickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactive obj\\heartpickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\health\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\health\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\interactive obj\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactive obj\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\game utility\\nextleveltrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\game utility\\nextleveltrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|c:\\unityprojects\\licenta\\lucrare de licenta\\assets\\scripts\\progress saving\\saveprogressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\progress saving\\saveprogressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\progress saving\\saveprogressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|c:\\unityprojects\\licenta\\lucrare de licenta\\assets\\scripts\\progress saving\\savefiledatawriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\progress saving\\savefiledatawriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\progress saving\\savefiledatawriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -21,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\sound\\musicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\sound\\musicmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\checkpoint\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\checkpoint\\checkpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\sound\\soundeffectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,11 +126,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameSession.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\GameSession.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameSession.cs",
+              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\GameSession.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameSession.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T18:05:14.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PlayerAttack2.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Player\\PlayerAttack2.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerAttack2.cs",
+              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Player\\PlayerAttack2.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerAttack2.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAmwA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T18:02:50.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Attack2Unlock.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Interactive Obj\\Attack2Unlock.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactive Obj\\Attack2Unlock.cs",
+              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Interactive Obj\\Attack2Unlock.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactive Obj\\Attack2Unlock.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T18:01:44.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Health.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Health\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Health\\Health.cs",
+              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Health\\Health.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Health\\Health.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAA1wAUAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T17:58:42.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HeartPickup.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Interactive Obj\\HeartPickup.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactive Obj\\HeartPickup.cs",
+              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Interactive Obj\\HeartPickup.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactive Obj\\HeartPickup.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T17:58:12.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAASwEwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T15:58:42.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Checkpoint.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Interactive Obj\\Checkpoint.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Interactive Obj\\Checkpoint.cs",
+              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Interactive Obj\\Checkpoint.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Interactive Obj\\Checkpoint.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAqwCIAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T17:56:24.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "FlyingEnemyFSM.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\FSM\\Bee\\FlyingEnemyFSM.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\Bee\\FlyingEnemyFSM.cs",
+              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\FSM\\Bee\\FlyingEnemyFSM.cs",
+              "RelativeToolTip": "Assets\\Scripts\\FSM\\Bee\\FlyingEnemyFSM.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T11:12:54.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "SaveProgressManager.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Progress Saving\\SaveProgressManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Progress Saving\\SaveProgressManager.cs",
@@ -114,12 +235,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Progress Saving\\SaveProgressManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T13:58:38.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T13:58:38.889Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "SaveFileDataWriter.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Progress Saving\\SaveFileDataWriter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Progress Saving\\SaveFileDataWriter.cs",
@@ -127,12 +247,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Progress Saving\\SaveFileDataWriter.cs",
               "ViewState": "AQIAAE0AAAAAAAAAAAAgwHAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T13:51:11.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T13:51:11.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "LevelProgressionData.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Progress Saving\\LevelProgressionData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Progress Saving\\LevelProgressionData.cs",
@@ -144,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "NextLevelTrigger.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Game Utility\\NextLevelTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Game Utility\\NextLevelTrigger.cs",
@@ -152,12 +271,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Game Utility\\NextLevelTrigger.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T13:47:00.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T13:47:00.459Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "SoundEffectManager.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Sound\\SoundEffectManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Sound\\SoundEffectManager.cs",
@@ -169,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "MusicManager.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Sound\\MusicManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Sound\\MusicManager.cs",
@@ -181,19 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Checkpoint.cs",
-              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Checkpoint\\Checkpoint.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Checkpoint\\Checkpoint.cs",
-              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Checkpoint\\Checkpoint.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Checkpoint\\Checkpoint.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAqwB4AAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T19:44:13.428Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "NPCWizard.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\NPC\\NPCWizard.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\NPCWizard.cs",
@@ -205,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "NPC.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\NPC\\NPC.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\NPC.cs",
@@ -217,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "PauseController.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\PauseController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PauseController.cs",
@@ -229,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "DialogueManager.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\NPC\\DialogueManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\DialogueManager.cs",
@@ -241,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "IDialogueNPC.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\NPC\\IDialogueNPC.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\IDialogueNPC.cs",
@@ -253,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "Node.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Pathfinding\\Node.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pathfinding\\Node.cs",
@@ -265,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "Heap.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Pathfinding\\Heap.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pathfinding\\Heap.cs",
@@ -277,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "PathRequestManager.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Pathfinding\\PathRequestManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pathfinding\\PathRequestManager.cs",
@@ -289,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "Pathfinding.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Pathfinding\\Pathfinding.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pathfinding\\Pathfinding.cs",
@@ -301,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "Unit.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Pathfinding\\Unit.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pathfinding\\Unit.cs",
@@ -313,7 +419,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "ReturnToPatrolState.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\FSM\\Bee\\ReturnToPatrolState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\Bee\\ReturnToPatrolState.cs",
@@ -325,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "FlyingEnemyState.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\FSM\\Bee\\FlyingEnemyState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\Bee\\FlyingEnemyState.cs",
@@ -337,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "FlyingPatrolState.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\FSM\\Bee\\FlyingPatrolState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\Bee\\FlyingPatrolState.cs",
@@ -349,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "FlyingChaseState.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\FSM\\Bee\\FlyingChaseState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\Bee\\FlyingChaseState.cs",
@@ -361,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "FlyingAttackState.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\FSM\\Bee\\FlyingAttackState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\Bee\\FlyingAttackState.cs",
@@ -370,18 +476,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T12:46:05.356Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "FlyingEnemyFSM.cs",
-              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\FSM\\Bee\\FlyingEnemyFSM.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\Bee\\FlyingEnemyFSM.cs",
-              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\FSM\\Bee\\FlyingEnemyFSM.cs",
-              "RelativeToolTip": "Assets\\Scripts\\FSM\\Bee\\FlyingEnemyFSM.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T11:12:54.13Z"
             }
           ]
         }

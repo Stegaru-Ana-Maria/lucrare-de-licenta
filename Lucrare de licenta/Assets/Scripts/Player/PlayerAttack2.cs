@@ -10,19 +10,23 @@ public class PlayerAttack2 : MonoBehaviour
     private PlayerMovement playerMovement;
     private float cooldownTimer = Mathf.Infinity;
 
-    private bool canShoot = false;
+    public bool attack2Unlocked = false;
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
+        attack2Unlocked = GameSession.attack2Unlocked;
     }
 
     private void Update()
     {
-        if (canShoot && Input.GetKeyDown(KeyCode.K) && cooldownTimer > attackCooldown && playerMovement.canAttack())
+        if (attack2Unlocked && Input.GetKeyDown(KeyCode.K) && cooldownTimer > attackCooldown && playerMovement.canAttack())
+        {
             FirePoisonArrow();
-
+            Debug.Log("PlayerAttack2");
+        }
+            
         cooldownTimer += Time.deltaTime;
     }
 
@@ -42,11 +46,5 @@ public class PlayerAttack2 : MonoBehaviour
                 return i;
         }
         return 0;
-    }
-
-    public void ActivateArrowPowerUp()
-    {
-        canShoot = true;
-        Debug.Log("Power-up obtained! Now you can shoot arrows.");
     }
 }
