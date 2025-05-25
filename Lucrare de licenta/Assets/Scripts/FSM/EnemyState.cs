@@ -13,4 +13,9 @@ public abstract class EnemyState
     public abstract void UpdateState();
     public abstract void ExitState();
 
+    public virtual string GetStateName()
+    {
+        return GetType().Name;
+    }
+
 }

@@ -99,6 +99,7 @@
     <Compile Include="Assets\Scripts\Behavior Trees\ActionNode.cs" />
     <Compile Include="Assets\Scripts\FSM\ChaseState.cs" />
     <Compile Include="Assets\Scripts\FSM\Bee\FlyingEnemyHealth.cs" />
+    <Compile Include="Assets\Scripts\Testing\TestController.cs" />
     <Compile Include="Assets\Scripts\GOAP\Core\GOAPPlanner.cs" />
     <Compile Include="Assets\Scripts\Bosses\Boss2\BossRoomTrigger.cs" />
     <Compile Include="Assets\Scripts\FSM\Bee\FlyingEnemyState.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="Assets\Scripts\Collectibles\Key.cs" />
     <Compile Include="Assets\Scripts\GOAP\Actions\RunToPlayerAction.cs" />
     <Compile Include="Assets\Scripts\GOAP\Actions\RecoverSpearAction.cs" />
+    <Compile Include="Assets\Scripts\Testing\AIStateDebugger.cs" />
     <Compile Include="Assets\Scripts\Traps\Lava.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\ConditionNode.cs" />
     <Compile Include="Assets\Scripts\Health\Health.cs" />

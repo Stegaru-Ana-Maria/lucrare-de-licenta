@@ -9,7 +9,12 @@ public class EnemyFSM : MonoBehaviour
     public Animator anim;
     public Transform enemy;
     public LayerMask playerLayer;
-    [SerializeField] public float detectionRange = 10f;
+    public Collider2D enemyCollider;
+    public float verticalAttackTolerance = 2.5f;
+    public float horizontalChaseTolerance = 0.5f;
+    public float maxVerticalChaseDistance = 3.5f;
+
+    [Header("Attack")]
     [SerializeField] public float attackRange = 3.5f;
     [SerializeField] public int damage = 1;
     [SerializeField] public float attackCooldown = 2f;
@@ -23,7 +28,9 @@ public class EnemyFSM : MonoBehaviour
 
     [Header("Chasing")]
     [SerializeField] public float chaseSpeed = 6f;
+    [SerializeField] public float detectionRange = 10f;
     [SerializeField] public float stopChaseDistance = 15f;
+    public LayerMask obstacleLayer;
 
     private void Start()
     {
@@ -73,4 +80,25 @@ public class EnemyFSM : MonoBehaviour
             Debug.Log("Attack missed. No player in range.");
         }
     }
+
+    public string GetCurrentStateName()
+    {
+        if (currentState != null)
+            return currentState.GetStateName();
+        else
+            return "No State";
+    }
+
+    public void ForceChaseState()
+    {
+        ChangeState(new ChaseState(this));
+        Debug.Log("Enemy forced into Chase State");
+    }
+
+    public void ForceAttackState()
+    {
+        ChangeState(new AttackState(this));
+        Debug.Log("Enemy forced into Attack State");
+    }
+
 }

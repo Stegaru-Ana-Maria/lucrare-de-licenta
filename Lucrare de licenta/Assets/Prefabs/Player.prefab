@@ -165,7 +165,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6a763369d844c4a45aa56e9eab25d723, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -283,6 +283,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  attack2Unlocked: 0
 --- !u!114 &5545600584935448991
 MonoBehaviour:
   m_ObjectHideFlags: 0

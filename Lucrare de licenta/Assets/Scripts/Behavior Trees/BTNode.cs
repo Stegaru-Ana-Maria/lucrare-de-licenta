@@ -9,6 +9,11 @@ public abstract class BTNode
     public NodeState nodeState { get { return _nodeState; } }
 
     public abstract NodeState Evaluate();
+
+    public virtual string GetNodeName()
+    {
+        return this.GetType().Name;
+    }
 }
 
 public enum NodeState

@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2002185669
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 9130647759989690307, guid: 85e9ce8ecf9e93e4086f525d29bb21fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -205,6 +205,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  enemyCollider: {fileID: 768487501732698102}
   detectionRange: 10
   attackRange: 3.5
   damage: 1
@@ -216,6 +217,9 @@ MonoBehaviour:
   idleDuration: 2
   chaseSpeed: 6
   stopChaseDistance: 15
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &1346575359834105409
 MonoBehaviour:
   m_ObjectHideFlags: 0

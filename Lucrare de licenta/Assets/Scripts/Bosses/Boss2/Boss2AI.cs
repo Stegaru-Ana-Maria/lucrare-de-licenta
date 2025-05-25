@@ -260,6 +260,11 @@ public class Boss2AI : MonoBehaviour
         return bossHealth.GetHealth();
     }
 
+    public BTNode GetRootNode()
+    {
+        return root;
+    }
+
     public void SetPlayerInRoom(bool isInRoom)
     {
         playerInRoom = isInRoom;
