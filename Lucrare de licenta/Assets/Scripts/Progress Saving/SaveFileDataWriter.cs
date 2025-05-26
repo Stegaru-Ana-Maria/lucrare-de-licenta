@@ -72,7 +72,7 @@ public class SaveFileDataWriter
             }
             catch (Exception ex)
             {
-
+                Debug.LogError("Exception:" + ex);
             }
 
         }

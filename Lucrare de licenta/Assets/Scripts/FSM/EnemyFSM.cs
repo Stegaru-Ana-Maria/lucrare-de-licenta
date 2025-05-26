@@ -1,7 +1,10 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class EnemyFSM : MonoBehaviour
 {
+    private Stopwatch stopwatch;
+
     private EnemyState currentState;
 
     [Header("General Settings")]
@@ -34,12 +37,21 @@ public class EnemyFSM : MonoBehaviour
 
     private void Start()
     {
+        stopwatch = new Stopwatch();
         ChangeState(new PatrolState(this)); 
     }
 
     private void Update()
     {
+        stopwatch.Reset();
+        stopwatch.Start();
+
         currentState?.UpdateState();
+
+        stopwatch.Stop();
+        float elapsedTime = stopwatch.ElapsedTicks / (float)Stopwatch.Frequency * 1000f;
+
+        PerformanceLogger.Instance.LogTime("FSM", elapsedTime);
     }
 
     public void ChangeState(EnemyState newState)
@@ -68,16 +80,11 @@ public class EnemyFSM : MonoBehaviour
             Health playerHealth = hit.GetComponent<Health>();
             if (playerHealth != null)
             {
-                Debug.Log("Enemy hit the player!");
                 playerHealth.TakeDamage(damage);
 
                 Vector2 knockbackDirection = (hit.transform.position - enemy.position).normalized;
                 playerHealth.ApplyKnockback(knockbackDirection * knockbackForce);
             }
-        }
-        else
-        {
-            Debug.Log("Attack missed. No player in range.");
         }
     }
 
@@ -92,13 +99,11 @@ public class EnemyFSM : MonoBehaviour
     public void ForceChaseState()
     {
         ChangeState(new ChaseState(this));
-        Debug.Log("Enemy forced into Chase State");
     }
 
     public void ForceAttackState()
     {
         ChangeState(new AttackState(this));
-        Debug.Log("Enemy forced into Attack State");
     }
 
 }

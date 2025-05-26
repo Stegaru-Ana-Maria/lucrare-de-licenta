@@ -61,6 +61,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.39f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Testing\Performance\PerformanceLogger.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Pathfinding.cs" />
     <Compile Include="Assets\Scripts\NPC\NPCDialogue.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\ChaseNode.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Assets\Scripts\Projectiles\Spear.cs" />
     <Compile Include="Assets\Scripts\NPC\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Projectiles\PoisonArrow.cs" />
+    <Compile Include="Assets\Scripts\Testing\Performance\FPSCounter.cs" />
     <Compile Include="Assets\Scripts\FSM\Bee\FlyingPatrolState.cs" />
     <Compile Include="Assets\Scripts\Bosses\Boss1\BossSpearThrow.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
@@ -168,6 +170,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Experiments\Performance\test_fsm_20.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -180,6 +183,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Experiments\Performance\test_fsm_10.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />

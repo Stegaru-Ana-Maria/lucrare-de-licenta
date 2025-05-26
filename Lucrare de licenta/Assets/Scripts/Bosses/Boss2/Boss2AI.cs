@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
@@ -5,13 +6,16 @@ using System.Collections;
 
 public class Boss2AI : MonoBehaviour
 {
+    private Stopwatch btStopwatch = new Stopwatch();
+    [SerializeField] public float btEvaluationTime;
+
     [Header("Stats")]
     [SerializeField] private float maxHP = 10f;
     public float currentHP;
     [SerializeField] private float chaseSpeed = 5f;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private SpriteRenderer bossSprite;
-    [SerializeField] private Color berserkColor = Color.red;
+    [SerializeField] private Color rageColor = Color.red;
 
     [Header("Ranges")]
     [SerializeField] private float attack1Range = 3.5f;
@@ -21,7 +25,7 @@ public class Boss2AI : MonoBehaviour
     [Header("Cooldowns")]
     [SerializeField] private float attackCooldownTime = 2f;
     [SerializeField] private float healCooldown = 10f;
-    [SerializeField] private float berserkCooldownTime = 1f;
+    [SerializeField] private float rageCooldownTime = 1f;
 
     [Header("Dependencies")]
     [SerializeField] private LayerMask obstacleMask;
@@ -62,7 +66,7 @@ public class Boss2AI : MonoBehaviour
         var isTooFarForSpecialAttack = new ConditionNode(() => Vector2.Distance(transform.position, player.position) > specialAttackRange);
 
         var isLowHP = new ConditionNode(() => bossHealth.GetHealth() < maxHP * 0.3f);
-        var isBerserk = new ConditionNode(() => bossHealth.GetHealth() <= maxHP * 0.15f);
+        var isRageMode = new ConditionNode(() => bossHealth.GetHealth() <= maxHP * 0.15f);
 
         var isInDefensiveZone = new ConditionNode(() =>
         {
@@ -111,7 +115,6 @@ public class Boss2AI : MonoBehaviour
             {
                 shieldObject.SetActive(true);
                 shieldActive = true;
-                Debug.Log("Shield activated.");
             }
             return NodeState.SUCCESS;
         });
@@ -122,7 +125,6 @@ public class Boss2AI : MonoBehaviour
             {
                 shieldObject.SetActive(false);
                 shieldActive = false;
-                Debug.Log("Shield deactivated.");
             }
 
             return NodeState.SUCCESS;
@@ -132,23 +134,21 @@ public class Boss2AI : MonoBehaviour
         {
             bossHealth.Heal(bossHealth.GetMaxHealth() * 0.2f);
             Instantiate(healEffectPrefab, transform.position, Quaternion.identity);
-            Debug.Log("Boss healed.");
             return NodeState.SUCCESS;
         });
 
         var chase = new ChaseNode(transform, player, chaseSpeed, animator, rb, obstacleMask);
 
-        var setBerserkSpeed = new ActionNode(() =>
+        var setRageSpeed = new ActionNode(() =>
         {
             chase.SetSpeed(chaseSpeed * 2f); 
             return NodeState.SUCCESS;
         });
 
-        var enterBerserk = new ActionNode(() =>
+        var enterRage = new ActionNode(() =>
         {
             if (bossSprite != null)
-                bossSprite.color = berserkColor;
-            Debug.Log("Entered Berserk Mode!");
+                bossSprite.color = rageColor;
             return NodeState.SUCCESS;
         });
 
@@ -162,9 +162,9 @@ public class Boss2AI : MonoBehaviour
         #region Cooldowns
         var crystalCooldown = new CooldownNode(specialAttack, attackCooldownTime);
         var healCooldownNode = new CooldownNode(heal, healCooldown);
-        var berserkCrystal = new CooldownNode(specialAttack, berserkCooldownTime);
-        var berserkAttack1 = new CooldownNode(attack1, berserkCooldownTime);
-        var berserkAttack2 = new CooldownNode(attack2, berserkCooldownTime);
+        var rageCrystal = new CooldownNode(specialAttack, rageCooldownTime);
+        var rageAttack1 = new CooldownNode(attack1, rageCooldownTime);
+        var rageAttack2 = new CooldownNode(attack2, rageCooldownTime);
         #endregion
 
         var approachAndAttack = new Sequence(new List<BTNode>
@@ -182,30 +182,30 @@ public class Boss2AI : MonoBehaviour
 
         #region Subtrees
 
-        // --- Berserk ---
+        // --- Rage ---
 
-        var berserkTree = new Sequence(new List<BTNode>
+        var rageTree = new Sequence(new List<BTNode>
         {
-            isBerserk,
-            enterBerserk,
-            setBerserkSpeed,
+            isRageMode,
+            enterRage,
+            setRageSpeed,
             new Repeater(
             new Selector(new List<BTNode>
             {
                 new Sequence(new List<BTNode>
                 {
                     isPlayerInAttack2Range,
-                    berserkAttack2
+                    rageAttack2
                 }),
                 new Sequence(new List<BTNode>
                 {
                     isPlayerInAttack1Range,
-                    berserkAttack1
+                    rageAttack1
                 }),
                 new Sequence(new List<BTNode>
                 {
                     isPlayerInSpecialAttackRange,
-                    berserkCrystal
+                    rageCrystal
                 }),
                 chase
             }),
@@ -241,7 +241,7 @@ public class Boss2AI : MonoBehaviour
         // --- Final Root Tree ---
         root = new Selector(new List<BTNode>
         {
-            berserkTree,
+            rageTree,
             defensiveTree,
             combatTree,
             idle
@@ -250,7 +250,14 @@ public class Boss2AI : MonoBehaviour
 
     void Update()
     {
+        btStopwatch.Restart();
+
         root?.Evaluate();
+
+        btStopwatch.Stop();
+        btEvaluationTime = btStopwatch.ElapsedTicks / (float)Stopwatch.Frequency * 1000f;
+
+        PerformanceLogger.Instance.LogTime("BT", btEvaluationTime);
 
         currentHP = bossHealth.GetHealth();
     }

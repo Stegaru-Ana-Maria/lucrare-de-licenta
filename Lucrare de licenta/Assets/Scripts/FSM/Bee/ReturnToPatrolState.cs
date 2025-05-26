@@ -17,7 +17,7 @@ public class ReturnToPatrolState : FlyingEnemyState
     {
         FlipTowardsPatrolPoint();
 
-        if (Vector2.Distance(enemy.enemy.position, enemy.patrolPointB.position) < 1f)
+        if (Vector2.Distance(enemy.enemy.position, enemy.patrolPointB.position) < 4f)
         {
             enemy.ChangeState(new FlyingPatrolState(enemy));
         }

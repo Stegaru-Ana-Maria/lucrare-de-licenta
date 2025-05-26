@@ -81,7 +81,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2002185669
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 3560799126909599731, guid: 77bf76dd943f81f43b83b4e719037c06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -234,14 +234,17 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  detectionRange: 10
   attackCooldown: 2
   patrolPointA: {fileID: 0}
   patrolPointB: {fileID: 0}
   patrolSpeed: 4
   idleDuration: 2
   chaseSpeed: 6
+  detectionRange: 10
   stopChaseDistance: 15
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &3563533365834175167
 MonoBehaviour:
   m_ObjectHideFlags: 0

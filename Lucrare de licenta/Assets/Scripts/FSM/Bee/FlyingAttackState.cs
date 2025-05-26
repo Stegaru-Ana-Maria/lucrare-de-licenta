@@ -28,11 +28,21 @@ public class FlyingAttackState : FlyingEnemyState
 
     public override void UpdateState()
     {
+        FacePlayer();
+
         if (Time.time >= lastAttackTime + attackCooldown)
         {
             attackComponent.ResetAttack();
             enemy.ChangeState(new FlyingChaseState(enemy)); 
         }
+    }
+
+    private void FacePlayer()
+    {
+        if (enemy.player.position.x > enemy.enemy.position.x)
+            enemy.enemy.localScale = new Vector3(Mathf.Abs(enemy.enemy.localScale.x), enemy.enemy.localScale.y, enemy.enemy.localScale.z);
+        else
+            enemy.enemy.localScale = new Vector3(-Mathf.Abs(enemy.enemy.localScale.x), enemy.enemy.localScale.y, enemy.enemy.localScale.z);
     }
 
     public override void ExitState() 
