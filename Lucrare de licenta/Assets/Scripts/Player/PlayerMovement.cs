@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     private BoxCollider2D boxCollider;
     private Animator anim;
+    public GameObject attackPoint;
+    public Vector2 boxSize;
+    public LayerMask enemies;
+    public float meleeAttackDamage;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] float speed;
@@ -27,6 +31,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetKeyDown(KeyCode.Z) && isGrounded())
+        {
+            anim.SetTrigger("attack1");
+            SoundEffectManager.Play("PlayerAttack1");
+        }
 
         if (Input.GetButtonDown("Jump") && isGrounded())
         {
@@ -46,6 +56,36 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("run", horizontal != 0);
         anim.SetBool("grounded", isGrounded());
 
+    }
+
+    public void endMeleeAttack()
+    {
+        anim.ResetTrigger("attack1");
+    }
+
+    public void meleeAttack()
+    {
+        Collider2D[] enemy = Physics2D.OverlapBoxAll(attackPoint.transform.position, boxSize, 0, enemies);
+
+        foreach (Collider2D enemyGameObject in enemy)
+        {
+            if (enemyGameObject.CompareTag("Enemy"))
+            {
+                Debug.Log("You hit an enemy...");
+                enemyGameObject.GetComponent<EnemyHealth>().TakeDamage(1);
+
+            }
+            else if (enemyGameObject.CompareTag("Boss"))
+            {
+                Debug.Log("You hit the boss...");
+                enemyGameObject.GetComponent<BossHealth>().TakeDamage(1);
+            }
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireCube(attackPoint.transform.position, boxSize);
     }
 
     private void FixedUpdate()

@@ -59,7 +59,7 @@ public class TestController : MonoBehaviour
             var ai = enemy.GetComponent<EnemyFSM>();
             if (ai != null)
             {
-                ai.ForceChaseState(); // metoda pe care o faci in FSM-ul tau
+                ai.ForceChaseState(); 
                 Debug.Log("Inamic fortat in Chase!");
             }
         }
@@ -71,7 +71,7 @@ public class TestController : MonoBehaviour
             var ai = enemy.GetComponent<EnemyFSM>();
             if (ai != null)
             {
-                ai.ForceAttackState(); // metoda pe care o faci in FSM-ul tau
+                ai.ForceAttackState(); 
                 Debug.Log("Inamic fortat in Attack!");
             }
         }

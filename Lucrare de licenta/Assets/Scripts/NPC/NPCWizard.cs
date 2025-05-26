@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+//using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +8,7 @@ public class NPCWizard : MonoBehaviour, IInteractable, IDialogueNPC
 {
     [Header("Dialogue Settings")]
     public NPCDialogue dialogueData;
-    public TMP_Text intructionText;
+  //  public TMP_Text intructionText;
 
     [Header("Wizard & Portal")]
     public Animator wizardAnimator;
