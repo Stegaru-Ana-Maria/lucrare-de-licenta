@@ -4,6 +4,13 @@ public class FPSCounter : MonoBehaviour
 {
     public float fps;
     private float deltaTime;
+    public static FPSCounter Instance;
+
+    void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+    }
 
     void Update()
     {

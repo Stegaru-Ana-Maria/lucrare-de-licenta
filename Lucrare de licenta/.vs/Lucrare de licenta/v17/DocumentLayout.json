@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|c:\\unityprojects\\licenta\\lucrare de licenta\\assets\\scripts\\testing\\performance\\performancelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|c:\\unityprojects\\licenta\\lucrare de licenta\\assets\\experiments\\performance\\test_fsm_50.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\experiments\\performance\\test_fsm_50.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|c:\\unityprojects\\licenta\\lucrare de licenta\\assets\\experiments\\performance\\test_fsm_20.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\experiments\\performance\\test_fsm_20.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|c:\\unityprojects\\licenta\\lucrare de licenta\\assets\\experiments\\performance\\test_fsm_10.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\experiments\\performance\\test_fsm_10.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\testing\\performance\\performancelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\testing\\performance\\performancelogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\testing\\performance\\fpscounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\testing\\performance\\fpscounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\testing\\aistatedebugger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\testing\\aistatedebugger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\fsm\\enemyfsm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\behavior trees\\btnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\behavior trees\\btnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\testing\\aistatedebugger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\testing\\aistatedebugger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4E6F23BE-5B7D-5E85-4A41-58ABF6BD5635}|Assembly-CSharp.csproj|C:\\UnityProjects\\Licenta\\Lucrare de licenta\\assets\\scripts\\progress saving\\levelprogressiondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,19 +75,70 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "test_fsm_50.txt",
+              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Experiments\\Performance\\test_fsm_50.txt",
+              "RelativeDocumentMoniker": "Assets\\Experiments\\Performance\\test_fsm_50.txt",
+              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Experiments\\Performance\\test_fsm_50.txt",
+              "RelativeToolTip": "Assets\\Experiments\\Performance\\test_fsm_50.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-27T16:19:44.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "test_fsm_20.txt",
+              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Experiments\\Performance\\test_fsm_20.txt",
+              "RelativeDocumentMoniker": "Assets\\Experiments\\Performance\\test_fsm_20.txt",
+              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Experiments\\Performance\\test_fsm_20.txt",
+              "RelativeToolTip": "Assets\\Experiments\\Performance\\test_fsm_20.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-27T15:37:43.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "test_fsm_10.txt",
+              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Experiments\\Performance\\test_fsm_10.txt",
+              "RelativeDocumentMoniker": "Assets\\Experiments\\Performance\\test_fsm_10.txt",
+              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Experiments\\Performance\\test_fsm_10.txt",
+              "RelativeToolTip": "Assets\\Experiments\\Performance\\test_fsm_10.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-26T22:12:50.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "PerformanceLogger.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Testing\\Performance\\PerformanceLogger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Testing\\Performance\\PerformanceLogger.cs",
               "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Testing\\Performance\\PerformanceLogger.cs",
               "RelativeToolTip": "Assets\\Scripts\\Testing\\Performance\\PerformanceLogger.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAsAAAAkAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAzwB8AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-26T14:17:54.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "FPSCounter.cs",
+              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Testing\\Performance\\FPSCounter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Testing\\Performance\\FPSCounter.cs",
+              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Testing\\Performance\\FPSCounter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Testing\\Performance\\FPSCounter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T14:15:26.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "EnemyFSM.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\FSM\\EnemyFSM.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\EnemyFSM.cs",
@@ -87,19 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FPSCounter.cs",
-              "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Testing\\Performance\\FPSCounter.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Testing\\Performance\\FPSCounter.cs",
-              "ToolTip": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Testing\\Performance\\FPSCounter.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Testing\\Performance\\FPSCounter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-26T14:15:26.071Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AIStateDebugger.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Testing\\AIStateDebugger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Testing\\AIStateDebugger.cs",
@@ -111,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "BTNode.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Behavior Trees\\BTNode.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Behavior Trees\\BTNode.cs",
@@ -123,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "LevelProgressionData.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Progress Saving\\LevelProgressionData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Progress Saving\\LevelProgressionData.cs",
@@ -135,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "NextLevelTrigger.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Game Utility\\NextLevelTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Game Utility\\NextLevelTrigger.cs",
@@ -147,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "PauseController.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\PauseController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PauseController.cs",
@@ -159,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "PathRequestManager.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Pathfinding\\PathRequestManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pathfinding\\PathRequestManager.cs",
@@ -171,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Pathfinding.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Pathfinding\\Pathfinding.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pathfinding\\Pathfinding.cs",
@@ -183,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Unit.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\Pathfinding\\Unit.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Pathfinding\\Unit.cs",
@@ -195,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "FlyingEnemyState.cs",
               "DocumentMoniker": "C:\\UnityProjects\\Licenta\\Lucrare de licenta\\Assets\\Scripts\\FSM\\Bee\\FlyingEnemyState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\Bee\\FlyingEnemyState.cs",
