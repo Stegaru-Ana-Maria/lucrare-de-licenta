@@ -426,7 +426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &160785869
 Transform:
   m_ObjectHideFlags: 0
@@ -436,7 +436,7 @@ Transform:
   m_GameObject: {fileID: 160785868}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 31.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -454,11 +454,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2766333256990915340, guid: bb1ba2abc9585d440b87a8d208b14525, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -146.4
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 2766333256990915340, guid: bb1ba2abc9585d440b87a8d208b14525, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 2766333256990915340, guid: bb1ba2abc9585d440b87a8d208b14525, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1182,7 +1182,7 @@ GameObject:
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &900276746
 Transform:
   m_ObjectHideFlags: 0
@@ -1337,7 +1337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1360308832
 Transform:
   m_ObjectHideFlags: 0
@@ -1347,7 +1347,7 @@ Transform:
   m_GameObject: {fileID: 1360308831}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 5, z: -0.10049529}
+  m_LocalPosition: {x: -106.5, y: 13.8, z: -0.10049529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2030,7 +2030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861b127f7290bfd4ab56bb7c364ecfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  logFilename: test_fsm_10.txt
+  logFilename: test_mix.txt
   enableLogging: 0
   testDuration: 30
 --- !u!1 &1977873959
@@ -2181,11 +2181,11 @@ PrefabInstance:
       objectReference: {fileID: 1057353906}
     - target: {fileID: 4162748880628105071, guid: c072dbc4ccd11574d85d275c920499dc, type: 3}
       propertyPath: gridWorldSize.x
-      value: 350
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 4162748880628105071, guid: c072dbc4ccd11574d85d275c920499dc, type: 3}
       propertyPath: gridWorldSize.y
-      value: 200
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6617767628308908624, guid: c072dbc4ccd11574d85d275c920499dc, type: 3}
       propertyPath: m_Name
@@ -2193,15 +2193,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6617767628308908624, guid: c072dbc4ccd11574d85d275c920499dc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9156874416933920283, guid: c072dbc4ccd11574d85d275c920499dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21
+      value: 198
       objectReference: {fileID: 0}
     - target: {fileID: 9156874416933920283, guid: c072dbc4ccd11574d85d275c920499dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 90
+      value: 13.950001
       objectReference: {fileID: 0}
     - target: {fileID: 9156874416933920283, guid: c072dbc4ccd11574d85d275c920499dc, type: 3}
       propertyPath: m_LocalPosition.z

@@ -84,21 +84,25 @@ public class PerformanceLogger : MonoBehaviour
         string path = Application.dataPath + "/Experiments/Performance/" + filename;
         using (StreamWriter writer = new StreamWriter(path))
         {
-            writer.WriteLine("Sample,FSM_Time_ms,FPS,CPU_FrameTime_ms");
+            writer.WriteLine("Sample,FSM_Time_ms,FSMPathfinding_Time_ms,BT_Time_ms,FPS,CPU_FrameTime_ms");
 
             int totalSamples = Mathf.Max(
                 aiTimes.ContainsKey("FSM") ? aiTimes["FSM"].Count : 0,
+                aiTimes.ContainsKey("Pathfinding") ? aiTimes["Pathfinding"].Count : 0,
+                aiTimes.ContainsKey("BT") ? aiTimes["BT"].Count : 0,
                 fpsValues.Count,
                 cpuFrameTimes.Count
             );
 
             for (int i = 0; i < totalSamples; i++)
             {
-                float aiTime = (aiTimes.ContainsKey("FSM") && i < aiTimes["FSM"].Count) ? aiTimes["FSM"][i] : 0f;
+                float fsmTime = (aiTimes.ContainsKey("FSM") && i < aiTimes["FSM"].Count) ? aiTimes["FSM"][i] : 0f;
+                float fsmPathTime = (aiTimes.ContainsKey("Pathfinding") && i < aiTimes["Pathfinding"].Count) ? aiTimes["Pathfinding"][i] : 0f;
+                float btTime = (aiTimes.ContainsKey("BT") && i < aiTimes["BT"].Count) ? aiTimes["BT"][i] : 0f;
                 float fps = (i < fpsValues.Count) ? fpsValues[i] : 0f;
                 float cpuTime = (i < cpuFrameTimes.Count) ? cpuFrameTimes[i] : 0f;
 
-                writer.WriteLine($"{i + 1},{aiTime:F4},{fps:F2},{cpuTime:F4}");
+                writer.WriteLine($"{i + 1},{fsmTime:F4},{fsmPathTime:F4},{btTime:F4},{fps:F2},{cpuTime:F4}");
             }
         }
 
