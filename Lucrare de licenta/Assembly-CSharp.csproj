@@ -63,17 +63,22 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Testing\Performance\PerformanceLogger.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Pathfinding.cs" />
+    <Compile Include="Assets\Scripts\UtilityAI\Boss1Health.cs" />
     <Compile Include="Assets\Scripts\NPC\NPCDialogue.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\ChaseNode.cs" />
+    <Compile Include="Assets\Scripts\UtilityAI\Actions\AIAction.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerAttack2.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\SpecialCrystalAttackNode.cs" />
     <Compile Include="Assets\Scripts\Game Utility\PlayerTeleport.cs" />
+    <Compile Include="Assets\Scripts\UtilityAI\BossStats.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\RetreatNode.cs" />
     <Compile Include="Assets\Scripts\PauseController.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyFloat.cs" />
     <Compile Include="Assets\Scripts\Collectibles\KeyDoor.cs" />
     <Compile Include="Assets\Scripts\Collectibles\UI_KeyHolder.cs" />
+    <Compile Include="Assets\Scripts\UtilityAI\Brain\Context.cs" />
     <Compile Include="Assets\Scripts\Effects\HealEffectController.cs" />
+    <Compile Include="Assets\Scripts\UtilityAI\Considerations\ConstantConsideration.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Grid.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\NormalCombatNode.cs" />
     <Compile Include="Assets\Scripts\Health\Healthbar.cs" />
@@ -95,6 +100,7 @@
     <Compile Include="Assets\Scripts\Behavior Trees\ParallelNode.cs" />
     <Compile Include="Assets\Scripts\Bosses\Boss2\BossHealth.cs" />
     <Compile Include="Assets\Scripts\FSM\Bee\ReturnToPatrolState.cs" />
+    <Compile Include="Assets\Scripts\UtilityAI\Considerations\Preconditions.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\Inverter.cs" />
     <Compile Include="Assets\Scripts\Bosses\Boss2\CrystalHitbox.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\ActionNode.cs" />
@@ -103,9 +109,11 @@
     <Compile Include="Assets\Scripts\Testing\TestController.cs" />
     <Compile Include="Assets\Scripts\GOAP\Core\GOAPPlanner.cs" />
     <Compile Include="Assets\Scripts\Bosses\Boss2\BossRoomTrigger.cs" />
+    <Compile Include="Assets\Scripts\UtilityAI\Actions\MoveToTargetAction.cs" />
     <Compile Include="Assets\Scripts\FSM\Bee\FlyingEnemyState.cs" />
     <Compile Include="Assets\Scripts\GOAP\WorldState\WorldState.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\CooldownNode.cs" />
+    <Compile Include="Assets\Scripts\UtilityAI\Considerations\Consideration.cs" />
     <Compile Include="Assets\Scripts\GOAP\Goals\Goal.cs" />
     <Compile Include="Assets\Scripts\Progress Saving\SaveFileDataWriter.cs" />
     <Compile Include="Assets\Scripts\Projectiles\SpearThrowTest.cs" />
@@ -128,6 +136,7 @@
     <Compile Include="Assets\Scripts\Bosses\Boss2\Boss2AI.cs" />
     <Compile Include="Assets\Scripts\Sound\MusicManager.cs" />
     <Compile Include="Assets\Scripts\Projectiles\Spear.cs" />
+    <Compile Include="Assets\Scripts\UtilityAI\Brain\Brain.cs" />
     <Compile Include="Assets\Scripts\NPC\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Projectiles\PoisonArrow.cs" />
     <Compile Include="Assets\Scripts\Testing\Performance\FPSCounter.cs" />
@@ -137,6 +146,7 @@
     <Compile Include="Assets\Scripts\FSM\AttackState.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\MeleeAttackNode.cs" />
     <Compile Include="Assets\Scripts\LevelMenu.cs" />
+    <Compile Include="Assets\Scripts\UtilityAI\Actions\IdleAction.cs" />
     <Compile Include="Assets\Scripts\BreakableBox.cs" />
     <Compile Include="Assets\Scripts\FSM\Bee\FlyingAttackState.cs" />
     <Compile Include="Assets\Scripts\GOAP\Core\GOAPAgent.cs" />
@@ -157,11 +167,13 @@
     <Compile Include="Assets\Scripts\FSM\Bee\FlyingChaseState.cs" />
     <Compile Include="Assets\Scripts\Game Utility\Teleport.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\Sequence.cs" />
+    <Compile Include="Assets\Scripts\UtilityAI\Brain\Sensor.cs" />
     <Compile Include="Assets\Scripts\Pathfinding\Heap.cs" />
     <Compile Include="Assets\Scripts\Behavior Trees\BossNodes\BossHealthNode.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\NPC\NPC.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\UtilityAI\Considerations\CurveConsideration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -184,7 +196,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\Experiments\Performance\test_mix.txt" />
+    <None Include="Assets\Experiments\Performance\test_mixt.txt" />
     <None Include="Assets\Experiments\Performance\test_bt_1.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Experiments\Performance\test_astar_20.txt" />

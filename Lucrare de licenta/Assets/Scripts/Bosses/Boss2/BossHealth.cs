@@ -9,6 +9,8 @@ public class BossHealth : MonoBehaviour
     private Animator anim;
     private bool isDead = false;
 
+    public float normalizedHealth => currentHP / maxHP;
+
     public delegate void OnHealthChanged(float currentHP, float maxHP);
 
     private void Awake()

@@ -45,7 +45,7 @@ public class FlyingEnemyFSM : MonoBehaviour
         stopwatch.Stop();
         float elapsedTime = stopwatch.ElapsedTicks / (float)Stopwatch.Frequency * 1000f;
 
-        PerformanceLogger.Instance.LogTime("Pathfinding", elapsedTime);
+      //  PerformanceLogger.Instance.LogTime("Pathfinding", elapsedTime);
     }
 
     public void ChangeState(FlyingEnemyState newState)

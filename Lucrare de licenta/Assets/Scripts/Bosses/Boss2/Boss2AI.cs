@@ -257,7 +257,7 @@ public class Boss2AI : MonoBehaviour
         btStopwatch.Stop();
         btEvaluationTime = btStopwatch.ElapsedTicks / (float)Stopwatch.Frequency * 1000f;
 
-        PerformanceLogger.Instance.LogTime("BT", btEvaluationTime);
+     //   PerformanceLogger.Instance.LogTime("BT", btEvaluationTime);
 
         currentHP = bossHealth.GetHealth();
     }

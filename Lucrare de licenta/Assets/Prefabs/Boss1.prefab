@@ -47,9 +47,6 @@ GameObject:
   - component: {fileID: 1704771295793321877}
   - component: {fileID: 8073997437250211222}
   - component: {fileID: 9209442694251971717}
-  - component: {fileID: 2766327954666490873}
-  - component: {fileID: 3890805894026908110}
-  - component: {fileID: 1902465415295947841}
   m_Layer: 18
   m_Name: Boss1
   m_TagString: Boss
@@ -382,57 +379,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2766327954666490873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725011643475417464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 164ae53dad0123a4e8063b350dd02657, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionName: Run To Player
-  cost: 2
-  requiresInRange: 0
-  isInRange: 0
---- !u!114 &3890805894026908110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725011643475417464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0db1dc2af16c4314f91e6f88101366af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actionName: Attack 1
-  cost: 0.1
-  requiresInRange: 0
-  isInRange: 0
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
---- !u!114 &1902465415295947841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725011643475417464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2118f6c3aa828e94482d4153219ec8cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spear: {fileID: 0}
-  health: 10
-  hasSpear: 1
-  playerTransform: {fileID: 0}
 --- !u!1001 &8967880804678493013
 PrefabInstance:
   m_ObjectHideFlags: 0
