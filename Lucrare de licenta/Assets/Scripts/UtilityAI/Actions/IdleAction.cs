@@ -7,8 +7,9 @@ namespace UtilityAI
     {
         public override void Execute(Context context)
         {
-            Debug.Log("idle");
-        //    context.agent.SetDestination(context.agent.transform.position);
+            Debug.Log("Boss is idling.");
+            context.animator.SetBool("isRunning", false);
+            context.animator.Play("Idle");
         }
     }
 }

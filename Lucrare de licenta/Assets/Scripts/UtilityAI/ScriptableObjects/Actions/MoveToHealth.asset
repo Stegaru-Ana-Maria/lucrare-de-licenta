@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: MoveToHealth
   m_EditorClassIdentifier: 
   targetTag: Health
-  consideration: {fileID: 11400000, guid: 61af567baa6b9d542a99d43a9e0b3588, type: 2}
+  consideration: {fileID: 11400000, guid: f0762a45b38086348994e36b727a0731, type: 2}
   moveSpeed: 5

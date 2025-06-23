@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class ThrowSpearAction : GOAPAction
+public class ThrowSpear_Action : GOAPAction
 {
     private BossSpearThrow spearThrower;
     private Transform playerTarget;
     private bool spearThrown = false;
 
-    public ThrowSpearAction()
+    public ThrowSpear_Action()
     {
         actionName = "Throw Spear";
         cost = 3f;

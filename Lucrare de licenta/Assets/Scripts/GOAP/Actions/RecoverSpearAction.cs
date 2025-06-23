@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class RecoverSpearAction : GOAPAction
+public class RecoverSpear_Action : GOAPAction
 {
     private GameObject spear;
     private bool recovered = false;
 
-    public RecoverSpearAction()
+    public RecoverSpear_Action()
     {
         actionName = "Recover Spear";
         cost = 2f;

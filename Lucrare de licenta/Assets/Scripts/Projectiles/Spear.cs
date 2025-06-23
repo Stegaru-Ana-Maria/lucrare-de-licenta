@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UtilityAI;
 
 public class Spear : MonoBehaviour
 {
@@ -34,6 +35,8 @@ public class Spear : MonoBehaviour
     private bool hasHitSomething = false;
     private bool isRecoverable = false;
 
+    private Context context;
+
     private void Start()
     {
         trajectoryStartPoint = transform.position;
@@ -45,7 +48,14 @@ public class Spear : MonoBehaviour
 
         UpdateProjectilePosition();
 
-
+        Debug.Log("Spear position in script: " + transform.position);
+        
+        if (context != null)
+        {
+            context.spearTransform = transform;
+            context.spearPosition = transform.position;
+        }
+        
         if (Vector3.Distance(transform.position, target.position) < destroyDistanceThreshold)
         {
             FallToGround();
@@ -137,6 +147,10 @@ public class Spear : MonoBehaviour
     {
         this.target = target;
         this.maxMoveSpeed = maxMoveSpeed;
+     //   this.context = context;
+      //  context.spear = this;
+        //context.spearTransform = transform;
+       // context.spearPosition = transform.position;
 
         float xDistanceToTarget = target.position.x - transform.position.x;
         this.trajectoryMaxRelativeHeight = Mathf.Abs(xDistanceToTarget) * trajectoryMaxHeight;
@@ -190,13 +204,6 @@ public class Spear : MonoBehaviour
             }
             FallToGround();
             isRecoverable = true;
-            /*
-            GOAPAgent agent = FindFirstObjectByType<GOAPAgent>(); 
-            if (agent != null)
-            {
-                agent.worldState.SetState("spearOnGround", true);
-            }
-            */
         }
         else if (collision.CompareTag("Ground"))
         {
@@ -221,13 +228,6 @@ public class Spear : MonoBehaviour
             {
                 spearVisual.transform.rotation = Quaternion.identity;
             }
-            /*
-            GOAPAgent agent = FindFirstObjectByType<GOAPAgent>();
-            if (agent != null)
-            {
-                agent.worldState.SetState("spearOnGround", true);
-            }
-            */
         }
     }
 
@@ -274,6 +274,10 @@ public class Spear : MonoBehaviour
     public Vector3 GetSpearPosition()
     {
         return transform.position;
+    }
+    public void SetContext(Context context)
+    {
+        this.context = context;
     }
 
 

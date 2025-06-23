@@ -23,6 +23,7 @@ TagManager:
   - Crystal
   - NPC
   - Teleporter
+  - Health
   layers:
   - Default
   - TransparentFX
@@ -47,7 +48,7 @@ TagManager:
   - Spear
   - Crystal
   - NPC
-  - 
+  - Foreground
   - 
   - 
   - 
@@ -77,6 +78,9 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 2292781627
+    locked: 0
+  - name: Boss
+    uniqueID: 1865230493
     locked: 0
   - name: Trap
     uniqueID: 4136389509

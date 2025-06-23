@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UtilityAI;
 
 
 public class BossSpearThrow : MonoBehaviour
@@ -19,12 +20,14 @@ public class BossSpearThrow : MonoBehaviour
 
     private float shootTimer;
     private bool hasSpear = true;
+    private Animator animator;
+
 
     public bool HasSpear => hasSpear;
 
     private void Start()
     {
-        shootTimer = 0f; 
+        shootTimer = 0f;
     }
 
     public void SetTarget(Transform newTarget)
@@ -74,7 +77,7 @@ public class BossSpearThrow : MonoBehaviour
 
             if (spear != null && spear.HasHitSomething())
             {
-                Destroy(spear.gameObject);
+               // Destroy(spear.gameObject);
                 hasSpear = true;
                 Debug.Log("Spear collected");
             }

@@ -26,7 +26,7 @@ namespace UtilityAI
             }
         }
 
-        void OnTriggerEnter2D(Collider2D other)
+        public void OnTriggerEnter2D(Collider2D other)
         {
             ProcessTrigger(other, transform => detectedObjects.Add(transform));
         }

@@ -250,6 +250,12 @@ MonoBehaviour:
   - name: TakeDamage
     audioClips:
     - {fileID: 8300000, guid: 32418801ca8252c449040d273b100ff6, type: 3}
+  - name: TakeDamage
+    audioClips:
+    - {fileID: 8300000, guid: 32418801ca8252c449040d273b100ff6, type: 3}
+  - name: MeleeAttack
+    audioClips:
+    - {fileID: 8300000, guid: f5f584fbfb2343e4faadfd1d7edf82fd, type: 3}
 --- !u!114 &1446652937412703644
 MonoBehaviour:
   m_ObjectHideFlags: 0
